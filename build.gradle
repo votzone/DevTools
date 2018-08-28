@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'wq'
-version '1.0-hw'
+version '1.0-hw' // hw :short for Hello Wrold
 
 ext {
     jarName = project.name

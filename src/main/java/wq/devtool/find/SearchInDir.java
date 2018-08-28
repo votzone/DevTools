@@ -1,5 +1,7 @@
 package wq.devtool.find;
 
+import wq.devtool.log.Log;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +61,7 @@ public class SearchInDir {
 
 
     private void searchFile(File file){
-        System.out.println("Searching In File "+file.getAbsolutePath());
+        Log.d("Searching In File "+file.getAbsolutePath());
         FileInputStream fileInputStream = null;
         try {
             fileInputStream= new FileInputStream(file);
@@ -81,7 +83,7 @@ public class SearchInDir {
     }
 
     private void searchDir(File dir){
-        System.out.println("Searching In Dir "+dir.getAbsolutePath());
+        Log.d("Searching In Dir "+dir.getAbsolutePath());
         for (File file:dir.listFiles()){
             if(file.isDirectory()){
                 searchDir(file);
@@ -98,9 +100,9 @@ public class SearchInDir {
     }
 
     public void printResult(){
-        System.out.println("Results:");
+        Log.ti("","搜索结果:");
         for (String file: result){
-            System.out.println("\tFind File : "+file);
+            Log.ti("","\t文件 : "+file);
         }
     }
 }
