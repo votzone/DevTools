@@ -37,7 +37,7 @@ public class SearchInDir {
         try {
             return keyword.getBytes(charset);
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             throw new RuntimeException("Wrong Charset");
         }
     }

@@ -2,6 +2,7 @@ package wq.devtool.cli;
 
 import wq.devtool.Config;
 import wq.devtool.find.SearchInDir;
+import wq.devtool.log.Log;
 
 import java.io.File;
 import java.util.Scanner;
@@ -9,12 +10,12 @@ import java.util.Scanner;
 public class DevMain {
     // 编码
     private String printUseage(){
-        System.out.println("用法:");
-        System.out.println("\t0- 在文件夹中查找");
-        System.out.println("\tD- 调试模式");
-        System.out.println("\tE- 退出");
+        System.out.println("Useage:");
+        System.out.println("\t0- Search In Dir");
+        System.out.println("\tD- Debug");
+        System.out.println("\tE- Exit");
         Scanner in = new Scanner(System.in);
-        System.out.print("请选择任务:");
+        System.out.print("Please Choose Task:");
         String cmds = in.nextLine();
         System.out.println(cmds);
 
@@ -39,9 +40,14 @@ public class DevMain {
                 String keyword = in.nextLine();
                 System.out.print("Input Keyword's Charset: ");
                 String charset = in.nextLine();
-                SearchInDir searchInDir = new SearchInDir(dir,keyword,charset);
-                searchInDir.search();
-                searchInDir.printResult();
+                try {
+                    SearchInDir searchInDir = new SearchInDir(dir,keyword,charset);
+                    searchInDir.search();
+                    searchInDir.printResult();
+                }catch (RuntimeException e){
+                    Log.e("Search Failed! Please Make sure your inputs is correct!");
+                }
+
             }
 
 
