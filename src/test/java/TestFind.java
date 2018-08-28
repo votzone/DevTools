@@ -1,6 +1,5 @@
 import org.junit.Test;
-import wq.devtool.Config;
-import wq.devtool.find.SearchInDir;
+import vot.wq.devtool.find.SearchInDir;
 
 public class TestFind {
 

@@ -1,6 +1,6 @@
-package wq.devtool.find;
+package vot.wq.devtool.find;
 
-import wq.devtool.log.Log;
+import vot.wq.devtool.log.Log;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -37,7 +37,6 @@ public class SearchInDir {
         try {
             return keyword.getBytes(charset);
         } catch (UnsupportedEncodingException e) {
-//            e.printStackTrace();
             throw new RuntimeException("Wrong Charset");
         }
     }

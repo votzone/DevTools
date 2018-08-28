@@ -1,7 +1,7 @@
-package wq.devtool.log;
+package vot.wq.devtool.log;
 
 import org.apache.http.util.TextUtils;
-import wq.devtool.Config;
+import vot.wq.devtool.Config;
 
 import java.io.PrintStream;
 

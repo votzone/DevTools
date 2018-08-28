@@ -1,4 +1,4 @@
-package wq.devtool;
+package vot.wq.devtool;
 
 public class Config {
     public static boolean isDebug = false;
