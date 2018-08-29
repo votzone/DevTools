@@ -1,7 +1,7 @@
 package vot.wq.devtool.cli;
 
+import vot.wq.devtool.L;
 import vot.wq.devtool.find.SearchInDir;
-import vot.wq.devtool.log.Log;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class SearchInDirCli {
             searchInDir.search();
             searchInDir.printResult();
         }catch (RuntimeException e){
-            Log.e("Search Failed! Please Make sure your inputs is correct!");
+            L.e("Search Failed! Please Make sure your inputs is correct!");
         }
     }
 }

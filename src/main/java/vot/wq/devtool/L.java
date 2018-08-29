@@ -1,11 +1,11 @@
-package vot.wq.devtool.log;
+package vot.wq.devtool;
 
 import org.apache.http.util.TextUtils;
 import vot.wq.devtool.Config;
 
 import java.io.PrintStream;
 
-public class Log {
+public class L {
     public static void td(String tag,String ...msg){
         if(!Config.isDebug) {
             return;
