@@ -12,15 +12,15 @@ import java.util.Scanner;
 public class DevMain {
     // 编码
     private String printUseage(){
-        L.i("Useage:");
-        L.i("\t0- Search In Dir");
-        L.i("\t1- Grab Blog");
-        L.i("\tD- Debug");
-        L.i("\tE- Exit");
+        L.ti("Useage:");
+        L.ti("\t0- Search In Dir");
+        L.ti("\t1- Grab Blog");
+        L.ti("\tD- Debug");
+        L.ti("\tE- Exit");
         Scanner in = new Scanner(System.in);
-        L.i("Please Choose Task:");
+        L.tiol("Please Choose Task:");
         String cmds = in.nextLine();
-        L.i(cmds);
+        L.ti(cmds);
 
         if(cmds.contains("D")){
             Config.isDebug = true;

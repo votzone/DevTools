@@ -3,6 +3,7 @@ package vot.wq.devtool;
 import org.apache.http.util.TextUtils;
 import vot.wq.devtool.Config;
 
+import javax.print.DocFlavor;
 import java.io.PrintStream;
 
 public class L {
@@ -10,15 +11,19 @@ public class L {
         if(!Config.isDebug) {
             return;
         }
-        print(System.out, tag, msg);
+        print(System.out, true,tag, msg);
     }
 
     public static void ti(String tag, String ...msg){
-        print(System.out, tag, msg);
+        print(System.out, true,tag, msg);
+    }
+
+    public static void tiol(String tag, String ...msg){
+        print(System.out, false, tag, msg);
     }
 
     public static void te(String tag, String ...msg){
-        print(System.err,tag, msg);
+        print(System.err,true,tag, msg);
     }
 
 
@@ -44,7 +49,7 @@ public class L {
     }
 
 
-    private static void print(PrintStream ps, String tag, String ...msg){
+    private static void print(PrintStream ps,boolean ln, String tag, String ...msg){
         if(!TextUtils.isEmpty(tag)) {
             ps.print(tag + " : ");
         }
@@ -53,6 +58,8 @@ public class L {
                 ps.print(msg[i]+" ");
             }
         }
-        ps.println();
+        if(ln) {
+            ps.println();
+        }
     }
 }

@@ -11,7 +11,7 @@ public class GrabBlogCli {
 
     public static void grabBlog(){
         Scanner in = new Scanner(System.in);
-        L.i("Blog Url: ");
+        L.tiol("Blog Url: ");
         String url = in.nextLine();
         try {
             GrabBlog grabBlog = new GrabBlog(url, Config.baseDir);
