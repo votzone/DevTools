@@ -1,5 +1,7 @@
 import org.junit.Test;
+import vot.wq.devtool.cli.ImageCli;
 import vot.wq.devtool.find.SearchInDir;
+import vot.wq.devtool.img.ResizeImg;
 import vot.wq.devtool.restf.GrabBlog;
 
 public class TestFind {
@@ -23,4 +25,14 @@ public class TestFind {
         grabBlog.grab();
         grabBlog.save();
     }
+
+    @Test
+    public void resizeImage(){
+        String input = "D:\\Workspace\\DevtoolsTestFile\\clipimg01.png";
+        String output = "D:\\Workspace\\DevtoolsTestFile\\clipimg01-1.png";
+        ResizeImg resizeImg = new ResizeImg(input, output, 100,100);
+        resizeImg.resizeWithRadio(17);
+
+    }
+
 }

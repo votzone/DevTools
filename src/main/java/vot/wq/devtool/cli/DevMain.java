@@ -12,15 +12,21 @@ import java.util.Scanner;
 public class DevMain {
     // 编码
     private String printUseage(){
-        L.ti("Useage:");
-        L.ti("\t0- Search In Dir");
-        L.ti("\t1- Grab Blog");
-        L.ti("\tD- Debug");
-        L.ti("\tE- Exit");
-        Scanner in = new Scanner(System.in);
+        L.ti(null,"Useage:");
+        L.ti(null,"\t0- Search In Dir");
+        L.ti(null,"\t1- Grab Blog");
+        L.ti(null,"\t2- Resize Image");
+        L.ti(null,"\t3- Make Android Icons");
+        L.ti(null,"\tD- Debug");
+        L.ti(null,"\tE- Exit");
+        String charset = "utf-8";
+        if(Config.needGbk){
+            charset = "gbk";
+        }
+        Scanner in = new Scanner(System.in,charset);
         L.tiol("Please Choose Task:");
         String cmds = in.nextLine();
-        L.ti(cmds);
+//        L.ti(cmds);
 
         if(cmds.contains("D")){
             Config.isDebug = true;
@@ -39,6 +45,14 @@ public class DevMain {
     private static String cmds = "";
     public static void main(String [] args){
         Config.isDebug = false;
+
+
+        String os = System.getProperty("os.name");
+        if(os.toLowerCase().startsWith("win")){
+            // 当且仅当win 平台使用gbk
+            Config.needGbk = true;
+        }
+
 //        if(args == null || args.length <=0){
 //            showTrayIcon();
 //        }else {
@@ -50,6 +64,14 @@ public class DevMain {
 
                 if(cmds.contains("1")){
                     GrabBlogCli.grabBlog();
+                }
+
+                if(cmds.contains("2")){
+                    ImageCli.resizeImage();
+                }
+
+                if(cmds.contains("3")){
+                    ImageCli.makeAndroidIcons();
                 }
 
                 if (cmds.contains("E")) {

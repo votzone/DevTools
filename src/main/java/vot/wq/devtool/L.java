@@ -1,9 +1,6 @@
 package vot.wq.devtool;
 
 import org.apache.http.util.TextUtils;
-import vot.wq.devtool.Config;
-
-import javax.print.DocFlavor;
 import java.io.PrintStream;
 
 public class L {
