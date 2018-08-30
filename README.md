@@ -4,6 +4,8 @@
 
 ## 简易切图
 
+单个切图和Android icon
+
 ## 查找文件
 输入要搜索的文件夹，要检索的字符及字符的编码，
 输出包含字符的文件全路径
@@ -11,3 +13,4 @@
 ## 依赖
 
 [remark](https://github.com/giflw/remark-java)
+[thumbnailator](https://github.com/coobird/thumbnailator)
