@@ -8,11 +8,11 @@ import java.util.Scanner;
 public class SearchInDirCli {
     public static void searchInDir(){
         Scanner in = new Scanner(System.in);
-        System.out.print("Search In Dir: ");
+        L.i("Search In Dir: ");
         String dir = in.nextLine();
-        System.out.print("Input Keyword: ");
+        L.i("Input Keyword: ");
         String keyword = in.nextLine();
-        System.out.print("Input Keyword's Charset: ");
+        L.i("Input Keyword's Charset: ");
         String charset = in.nextLine();
         try {
             SearchInDir searchInDir = new SearchInDir(dir,keyword,charset);

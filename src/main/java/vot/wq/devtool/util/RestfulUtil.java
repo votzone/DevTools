@@ -12,7 +12,11 @@ import org.htmlcleaner.CleanerProperties;
 import org.htmlcleaner.DomSerializer;
 import org.htmlcleaner.HtmlCleaner;
 import org.htmlcleaner.TagNode;
+import org.jsoup.nodes.Element;
+import org.seimicrawler.xpath.JXDocument;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import vot.wq.devtool.L;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -21,6 +25,7 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import java.io.IOException;
+import java.util.List;
 
 public class RestfulUtil {
 
@@ -149,6 +154,21 @@ public class RestfulUtil {
         }
 
         return null;
+    }
+
+
+    public static String findHtmlByXpath(String xpath, String text) {
+
+        JXDocument jxDocument = JXDocument.create(text);
+        List<Object> rs = jxDocument.sel(xpath);
+        for (Object o:rs){
+//            if (o instanceof Element){
+//                int index = ((Element) o).siblingIndex();
+//                System.out.println(index);
+//            }
+            return o.toString();
+        }
+        return "";
     }
 
     public static String findTextByXpath(String xpath, String text) throws XPathExpressionException, ParserConfigurationException {

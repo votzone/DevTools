@@ -1,29 +1,36 @@
 package vot.wq.devtool.cli;
 
 import vot.wq.devtool.Config;
+import vot.wq.devtool.L;
 import vot.wq.devtool.gui.system.SystemIcon;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 import java.util.Scanner;
 
 public class DevMain {
     // 编码
     private String printUseage(){
-        System.out.println("Useage:");
-        System.out.println("\t0- Search In Dir");
-        System.out.println("\tD- Debug");
-        System.out.println("\tE- Exit");
+        L.i("Useage:");
+        L.i("\t0- Search In Dir");
+        L.i("\t1- Grab Blog");
+        L.i("\tD- Debug");
+        L.i("\tE- Exit");
         Scanner in = new Scanner(System.in);
-        System.out.print("Please Choose Task:");
+        L.i("Please Choose Task:");
         String cmds = in.nextLine();
-        System.out.println(cmds);
+        L.i(cmds);
 
         if(cmds.contains("D")){
             Config.isDebug = true;
         }
 
-
+        if(!Config.isDebug){
+            File file = new File(".\\data");
+            file.mkdirs();
+            Config.baseDir = file.getAbsolutePath();
+        }
 
         return cmds.trim().replace(","," ").replace("，"," ");
 
@@ -31,20 +38,25 @@ public class DevMain {
 
     private static String cmds = "";
     public static void main(String [] args){
-        if(args == null || args.length <=0){
-            showTrayIcon();
-        }else {
+        Config.isDebug = false;
+//        if(args == null || args.length <=0){
+//            showTrayIcon();
+//        }else {
             while (true) {
                 cmds = new DevMain().printUseage();
                 if (cmds.contains("0")) {
                     SearchInDirCli.searchInDir();
                 }
 
+                if(cmds.contains("1")){
+                    GrabBlogCli.grabBlog();
+                }
+
                 if (cmds.contains("E")) {
                     System.exit(0);
                 }
             }
-        }
+//        }
     }
 
     public static void showTrayIcon(){
