@@ -1,0 +1,1 @@
+package vot.wq.lintcode;
