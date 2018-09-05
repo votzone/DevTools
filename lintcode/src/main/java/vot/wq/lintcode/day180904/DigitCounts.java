@@ -16,33 +16,42 @@ public class DigitCounts {
     public int digitCounts(int k, int n) {
         // write your code here
         int rs = 0;
-        int jinzhi = 1;
-        int mod = 0;
-        do {
-            mod = n %10;
-            n = n/10;
-            rs+=n*jinzhi;
-            jinzhi *=10;
+        int jinzhi = 10;// 几位数 Number of digits
+        int num = n;
+        int debug =0;
+        while ((num/jinzhi)>0){
+            //TODO 对零的处理有问题
+            rs += (num / jinzhi) * (jinzhi/10);
+            if(num/jinzhi >10)
 
-        }while (n>10);
-        if(n ==k){
-            rs+=(mod+1)*(jinzhi/10);
+
+            debug = num%jinzhi/(jinzhi/10);
+            if((num%jinzhi/(jinzhi/10))==k) {
+                rs += num % jinzhi % (jinzhi / 10) + 1;
+            }
+            debug = num%jinzhi/(jinzhi/10);
+            if((num%jinzhi/(jinzhi/10))>k){
+                rs += jinzhi/10;
+            }
+
+
+            jinzhi *=10;
         }
-        if(n>k){
-            rs += jinzhi;
+        jinzhi /=10;
+
+        if((num/jinzhi) > k){
+            rs += (jinzhi/10);
         }
-        if(mod ==k){
-            rs +=1;
+        if((num/jinzhi) == k){
+            rs += (num %jinzhi)+1;
         }
-        if(mod>k){
-            rs+=(jinzhi/10);
-        }
+
         return rs;
     }
 
     public static void main(String args[]){
-        int k =1;
-        int n =111;
+        int k =0;
+        int n =121;
         System.out.println(new DigitCounts().digitCounts(k,n));
     }
 }
