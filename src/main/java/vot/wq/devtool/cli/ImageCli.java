@@ -52,6 +52,7 @@ public class ImageCli {
 
     private static Map<String, Integer> iconSize = new HashMap<>();
     static {
+        iconSize.put("ldpi",36);
         iconSize.put("hdpi",72);
         iconSize.put("mdpi",48);
         iconSize.put("xhdpi",96);
