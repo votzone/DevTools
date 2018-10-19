@@ -17,6 +17,7 @@ public class DevMain {
         L.ti(null,"\t1- Grab Blog");
         L.ti(null,"\t2- Resize Image");
         L.ti(null,"\t3- Make Android Icons");
+        L.ti(null,"\t4- Reset Smali R Ids");
         L.ti(null,"\tD- Debug");
         L.ti(null,"\tE- Exit");
         String charset = "utf-8";
@@ -72,6 +73,10 @@ public class DevMain {
 
                 if(cmds.contains("3")){
                     ImageCli.makeAndroidIcons();
+                }
+
+                if(cmds.contains("4")){
+                    AndroidRCli.resetSmaliRids();
                 }
 
                 if (cmds.contains("E")) {
