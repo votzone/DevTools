@@ -20,10 +20,41 @@ public class ResetSmaliIds {
         ids = new HashMap<>();
     }
 
-    private void dealOne(File oneSmali){
+    private void dealOne(File oneSmali) throws IOException {
         String fileName = oneSmali.getName();
         if(fileName.startsWith("R$")) {
+            String subname = fileName.substring(2,fileName.length()-6);
+            L.e(subname);
+            Map<String,String> typeIds = ids.get(subname);
+            if(typeIds ==null){
+                return;
+            }
+            File outFile = new File(oneSmali.getAbsolutePath()+"_");
+            if(outFile.exists()){
+                outFile.delete();
+            }
             L.e("dealOne" + oneSmali.getAbsolutePath());
+            BufferedWriter bw= new BufferedWriter(new FileWriter(outFile));
+            BufferedReader br = new BufferedReader( new FileReader(oneSmali));
+            String line = null;
+            while ((line = br.readLine())!=null){
+                boolean skip = false;
+                String value = obtainValue(line);
+                if(value !=null){
+                    String id = typeIds.get(value);
+                    if(id!=null){
+                        skip = true;
+                        bw.write(buildLine(value,id));
+                    }
+                }
+                if(!skip){
+                    bw.write(line+"\n");
+                }
+            }
+            bw.close();
+            br.close();
+            oneSmali.delete();
+            outFile.renameTo(oneSmali);
         }
     }
 
@@ -33,7 +64,11 @@ public class ResetSmaliIds {
             if(file.isDirectory()){
                 walkInDirs(file);
             }else {
-                dealOne(file);
+                try {
+                    dealOne(file);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -56,6 +91,20 @@ public class ResetSmaliIds {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private String buildLine(String value,String id){
+        String format = ".field public static final %s:I = %s\n";
+        return String.format(format,value,id);
+    }
+
+    private String obtainValue(String line){
+        Pattern pattern = Pattern.compile(".field public static final (.*)");
+        Matcher matcher = pattern.matcher(line);
+        if(matcher.find()) {
+            return matcher.group(1);
+        }
+        return null;
     }
 
     private void obtainIds(String line){
