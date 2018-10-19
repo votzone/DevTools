@@ -37,6 +37,7 @@ public class ResetSmaliIds {
             BufferedWriter bw= new BufferedWriter(new FileWriter(outFile));
             BufferedReader br = new BufferedReader( new FileReader(oneSmali));
             String line = null;
+            boolean flagUpdate = false;
             while ((line = br.readLine())!=null){
                 boolean skip = false;
                 String value = obtainValue(line);
@@ -49,12 +50,18 @@ public class ResetSmaliIds {
                 }
                 if(!skip){
                     bw.write(line+"\n");
+                }else {
+                    flagUpdate = true;
                 }
             }
             bw.close();
             br.close();
-            oneSmali.delete();
-            outFile.renameTo(oneSmali);
+            if(flagUpdate) {
+                oneSmali.delete();
+                outFile.renameTo(oneSmali);
+            }else {
+                outFile.delete();
+            }
         }
     }
 
@@ -99,7 +106,7 @@ public class ResetSmaliIds {
     }
 
     private String obtainValue(String line){
-        Pattern pattern = Pattern.compile(".field public static final (.*)");
+        Pattern pattern = Pattern.compile(".field public static final (.*):I = 0x");
         Matcher matcher = pattern.matcher(line);
         if(matcher.find()) {
             return matcher.group(1);
