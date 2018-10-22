@@ -43,9 +43,9 @@ public class ResetSmaliIds {
                 String value = obtainValue(line);
                 if(value !=null){
                     String id = typeIds.get(value);
-                    if(id!=null){
+                    if(id!=null && needBuildLine(line,id)){
                         skip = true;
-                        bw.write(buildLine(value,id));
+                        bw.write(buildLine(value, id));
                     }
                 }
                 if(!skip){
@@ -100,6 +100,16 @@ public class ResetSmaliIds {
         }
     }
 
+    /**
+     * 当且仅当 line 中的id与需要的id不向等时，才需要build
+     * @param line
+     * @param id
+     * @return
+     */
+    private boolean needBuildLine(String line, String id){
+        return !line.contains(id);
+    }
+
     private String buildLine(String value,String id){
         String format = ".field public static final %s:I = %s\n";
         return String.format(format,value,id);
@@ -115,6 +125,9 @@ public class ResetSmaliIds {
     }
 
     private void obtainIds(String line){
+        if(line.contains("APKTOOL_DUMMY")){
+            return;
+        }
         Pattern pattern = Pattern.compile("<public type=\"(.*)\" name=\"(.*)\" id=\"(.*)\" />");
         Matcher matcher = pattern.matcher(line);
         if(matcher.find()) {
