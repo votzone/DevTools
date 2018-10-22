@@ -18,6 +18,7 @@ public class DevMain {
         L.ti(null,"\t2- Resize Image");
         L.ti(null,"\t3- Make Android Icons");
         L.ti(null,"\t4- Reset Smali R Ids");
+        L.ti(null,"\t5- Merge Public Xml File");
         L.ti(null,"\tD- Debug");
         L.ti(null,"\tE- Exit");
         String charset = "utf-8";
@@ -77,6 +78,10 @@ public class DevMain {
 
                 if(cmds.contains("4")){
                     AndroidRCli.resetSmaliRids();
+                }
+
+                if(cmds.contains("5")){
+                    AndroidRCli.mergePublicXml();
                 }
 
                 if (cmds.contains("E")) {
