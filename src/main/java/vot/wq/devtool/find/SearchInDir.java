@@ -5,6 +5,7 @@ import vot.wq.devtool.L;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SearchInDir {
@@ -77,6 +78,7 @@ public class SearchInDir {
                 }
             }
             fileInputStream.close();
+            Arrays.fill(buf,(byte) 0);
         } catch (IOException e) {
             e.printStackTrace();
         }
