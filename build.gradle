@@ -43,4 +43,6 @@ dependencies {
     compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
     compile 'cn.wanghaomiao:JsoupXpath:2.1-Beta'
+    compile group: 'com.google.guava', name: 'guava', version: '27.0-jre'
+
 }
