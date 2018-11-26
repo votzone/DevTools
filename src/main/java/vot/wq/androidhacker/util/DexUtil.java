@@ -19,37 +19,25 @@ public class DexUtil {
                 ((buf[off+4] &0xff)<< 24);
     }
 
-    public static int readSleb(byte [] buf, int off){
-        int result = 0;
-
-        result = buf[off] &0x7f;
-        if(buf[off] < 0){
-            result |= (buf[off+1] &0x7f) << 7;
-
-            if(buf[off+1] <0){
-                result |= (buf[off+2] &0x7f) << 14;
-
-                if(buf[off+2] <0){
-                    result |= (buf[off+3] &0x7f) << 21;
-
-                    if(buf[off+3] <0){
-                        result |= (buf[off+4] &0x7f) << 28;
-                    }else {
-                        result = result << 4 >>4;
-                    }
-                }else {
-                    // third
-                    result = result <<11 >>11;
-                }
-            }else {
-                // secend
-                result = result <<18 >>18;
+    public static String byte2String(byte [] bytes){
+        StringBuffer sbuffer = new StringBuffer();
+        if(bytes !=null){
+            for (byte b: bytes){
+                sbuffer.append(Integer.toHexString(Byte.toUnsignedInt(b))).append(" ");
             }
-        }else {
-            // first
-            result = result <<25 >>25;
         }
+        sbuffer.trimToSize();
+        return sbuffer.toString();
 
-        return result;
     }
+
+    public static void printBytes(byte[] buf){
+        if(buf!=null) {
+            for (byte b:buf){
+                System.out.print(Integer.toHexString(Byte.toUnsignedInt(b))+" ");
+            }
+            System.out.println();
+        }
+    }
+
 }
