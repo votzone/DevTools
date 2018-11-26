@@ -12,7 +12,7 @@ public class DexHeader extends BaseDexModule{
     int fileSize;
     int headerSize;
     int endianTag;
-    int linkSize;
+    int linkSize;// link data always 0
     int linkOff;
     int mapOff;
 

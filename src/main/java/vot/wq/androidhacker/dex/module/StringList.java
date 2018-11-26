@@ -7,10 +7,14 @@ public class StringList extends BaseDexModule{
 
     public StringList(byte[] buf, int size, int off) {
         super(buf, off);
+        this.offset = off;
         array = new String[size];
         loadStringList();
     }
 
+    public String[] getArray(){
+        return array;
+    }
     private void loadStringList(){
         for(int i=0;i<array.length;i++){
             int stringOff = readU4();
