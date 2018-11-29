@@ -1,9 +1,7 @@
 package vot.wq.androidhacker.dex;
 
 import com.google.common.io.ByteStreams;
-import vot.wq.androidhacker.dex.module.DexHeader;
-import vot.wq.androidhacker.dex.module.StringList;
-import vot.wq.androidhacker.dex.module.TypeList;
+import vot.wq.androidhacker.dex.module.*;
 import vot.wq.devtool.util.FileUtil;
 
 import java.io.*;
@@ -17,6 +15,8 @@ public class DexDumper {
     DexHeader dexHeader;
     StringList stringList;
     TypeList typeList;
+    ProtoList protoList;
+    FieldList fieldList;
 
     public DexDumper(String dexPath){
 
@@ -35,6 +35,11 @@ public class DexDumper {
 
         typeList = new TypeList(dexBuf, dexHeader.getTypeIdsSize(),dexHeader.getTypeIdsOff(), stringList);
 
+        protoList = new ProtoList(dexBuf, dexHeader.getProtoIdsSize(), dexHeader.getProtoIdsOff(), stringList, typeList);
+
+        fieldList = new FieldList(dexBuf,dexHeader.getFieldIdsSize(),dexHeader.getFieldIdsOff(), stringList, typeList);
+
+
     }
 
     public void dump(){
@@ -52,6 +57,18 @@ public class DexDumper {
             System.out.println("\n\nType List:");
             System.out.println(typeList.toString());
         }
+
+        if(protoList !=null){
+            System.out.println("\n\nProto List:");
+            System.out.println(protoList.toString());
+        }
+
+        if(fieldList !=null){
+            System.out.println("\n\nField List:");
+            System.out.println(fieldList.toString());
+        }
+
+
     }
 
     public void loadDexHeader(){
