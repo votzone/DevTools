@@ -17,6 +17,7 @@ public class DexDumper {
     TypeList typeList;
     ProtoList protoList;
     FieldList fieldList;
+    MethodList methodList;
 
     public DexDumper(String dexPath){
 
@@ -40,6 +41,7 @@ public class DexDumper {
         fieldList = new FieldList(dexBuf,dexHeader.getFieldIdsSize(),dexHeader.getFieldIdsOff(), stringList, typeList);
 
 
+        methodList = new MethodList(dexBuf, dexHeader.getMethodIdsSize(), dexHeader.getFieldIdsOff(), stringList, typeList, protoList);
     }
 
     public void dump(){
@@ -66,6 +68,11 @@ public class DexDumper {
         if(fieldList !=null){
             System.out.println("\n\nField List:");
             System.out.println(fieldList.toString());
+        }
+
+        if(methodList !=null){
+            System.out.println("\n\nMethod List:");
+            System.out.println(methodList.toString());
         }
 
 
