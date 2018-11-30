@@ -42,7 +42,7 @@ public class DexDumper {
         fieldList = new FieldList(dexBuf,dexHeader.getFieldIdsSize(),dexHeader.getFieldIdsOff(), stringList, typeList);
 
 
-        methodList = new MethodList(dexBuf, dexHeader.getMethodIdsSize(), dexHeader.getFieldIdsOff(), stringList, typeList, protoList);
+        methodList = new MethodList(dexBuf, dexHeader.getMethodIdsSize(), dexHeader.getMethodIdsOff(), stringList, typeList, protoList);
 
         classDefList = new ClassDefList( dexBuf, dexHeader.getClassDefsSize(), dexHeader.getClassDefsOff(), stringList, typeList);
 

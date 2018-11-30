@@ -32,7 +32,7 @@ public class TextDex {
 
     @Test
     public void testDumpDex() throws IOException {
-        String dexPath ="/Users/chunleiyan/workspace/androidhacker/dex/Hello.dex";
+        String dexPath ="D:\\Workspace\\ajm\\dex\\Hello.dex";
         DexDumper dumper = new DexDumper(dexPath);
         dumper.loadDex();
         dumper.dump();
