@@ -2,6 +2,7 @@ package vot.wq.androidhacker.dex;
 
 import com.google.common.io.ByteStreams;
 import vot.wq.androidhacker.dex.module.*;
+import vot.wq.androidhacker.util.DexUtil;
 import vot.wq.devtool.util.FileUtil;
 
 import java.io.*;
@@ -31,7 +32,7 @@ public class DexDumper {
         dexBuf = ByteStreams.toByteArray(inputStream);
         inputStream.close();
 
-        loadDexHeader();
+        dexHeader = new DexHeader(dexBuf, 0);
 
         stringList = new StringList(dexBuf,dexHeader.getStringIdsSize(),dexHeader.getStringIdsOff());
 
@@ -84,10 +85,12 @@ public class DexDumper {
             System.out.println(classDefList.toString());
         }
 
+        System.out.println("\n\nSHA-1 Digest:");
+        System.out.println(DexUtil.bufferToHex(DexUtil.getDexSha1(dexBuf, 0x20, dexBuf.length - 0x20)));
+
+        System.out.println("\n\nChecksum:");
+        System.out.println(Long.toHexString(DexUtil.getCheckSum(dexBuf, 0xc, dexBuf.length - 0xc)));
 
     }
 
-    public void loadDexHeader(){
-        dexHeader = new DexHeader(dexBuf, 0);
-    }
 }
