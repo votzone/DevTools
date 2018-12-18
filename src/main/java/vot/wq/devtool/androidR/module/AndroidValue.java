@@ -3,12 +3,12 @@ package vot.wq.devtool.androidR.module;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class AndroidValue {
+public abstract class AndroidValue {
     public static final String LinePfx1 = "    ";
     public static final String LinePfx2 = "        ";
-    private String name;
-    private HashMap<String,String> attrs;
-    private ArrayList<String> values;
+    protected String name;
+    protected HashMap<String,String> attrs;
+    protected ArrayList<String> values;
     int depth = 1;
 
     public AndroidValue(String name){
@@ -34,6 +34,20 @@ public class AndroidValue {
             stringBuilder.append(" />");
         }else {
             // todo 需要加 values
+            boolean mutiLine = false;
+            String first = values.get(0).trim();
+            mutiLine = first.startsWith("<") && first.endsWith(">");
+            if(mutiLine){
+                stringBuilder.append("\n");
+                crtDept ++;
+                for(String val: values){
+                    stringBuilder.append(appendPfx(crtDept)).append(val).append("\n");
+                }
+                stringBuilder.append("</").append(name).append(">");
+                crtDept--;
+            }else {
+                stringBuilder.append(first).append("</").append(name).append(">");
+            }
         }
 
         return stringBuilder.toString();
@@ -81,4 +95,19 @@ public class AndroidValue {
         this.values = values;
     }
 
+    abstract public void setValue(String line);
+    public boolean equals(AndroidValue obj){
+        if(obj instanceof AndroidValue){
+            IdValue other = (IdValue)obj;
+            if(attrs.containsKey("name") && other.attrs.containsKey("name")){
+                return attrs.get("name").equals(other.attrs.get("name"));
+            }
+        }
+        return false;
+    }
+
+    protected boolean closed = true;
+    public boolean closed(){
+        return closed;
+    }
 }
