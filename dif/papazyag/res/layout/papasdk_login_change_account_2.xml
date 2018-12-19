@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/papasdk_title_back" android:layout_width="@dimen/dp933" android:layout_height="@dimen/dp144">
+            <TextView android:textSize="@dimen/sp42" android:textColor="#ff3a85e2" android:layout_gravity="center|left" android:id="@id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp60" android:text="返回" />
+            <ImageView android:layout_gravity="center" android:id="@id/titleIcon" android:focusableInTouchMode="false" android:layout_width="115.0dip" android:layout_height="25.0dip" android:src="@drawable/papasdk_login_first_title" />
+        </FrameLayout>
+        <FrameLayout android:background="@drawable/papasdk_main_back" android:layout_width="@dimen/dp933" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/dp57" android:paddingBottom="@dimen/dp108" android:layout_width="fill_parent" android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:textSize="@dimen/sp39" android:textColor="@color/grey_3" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请选择登录方式" />
+                <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp79">
+                    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/sp36" android:textColor="@color/grey_4" android:gravity="center" android:id="@id/txt_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手机登录" android:drawableTop="@drawable/papasdk_login_first_icon_2" android:drawablePadding="@dimen/dp20" />
+                        <TextView android:textSize="@dimen/sp36" android:textColor="@color/grey_4" android:gravity="center" android:id="@id/txt_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp150" android:text="账号" android:drawableTop="@drawable/papasdk_login_first_icon_3" android:drawablePadding="@dimen/dp20" />
+                        <TextView android:textSize="@dimen/sp36" android:textColor="@color/grey_4" android:gravity="center" android:id="@id/txt_4" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp150" android:text="第三方登录" android:drawableTop="@drawable/papasdk_login_first_icon_4" android:drawablePadding="@dimen/dp20" />
+                    </LinearLayout>
+                    <ImageView android:layout_gravity="center|left|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/papasdk_no_register_icon" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

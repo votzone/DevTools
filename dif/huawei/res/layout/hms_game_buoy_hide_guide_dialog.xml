@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/hms_game_id_buoy_hide_guide_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.huawei.hms.support.api.game.ui.GifImageView android:id="@id/hms_game_id_buoy_hide_guide_gif" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hms_game_hide_guide" android:layout_below="@id/hms_game_id_buoy_hide_guide_text" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/hms_game_id_buoy_hide_guide_checklayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/hms_game_id_buoy_hide_guide_gif">
+        <CheckBox android:id="@id/hms_game_id_buoy_hide_guide_remind" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" />
+        <TextView android:textSize="13.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hms_game_hide_guide_noremind" />
+    </LinearLayout>
+</RelativeLayout>

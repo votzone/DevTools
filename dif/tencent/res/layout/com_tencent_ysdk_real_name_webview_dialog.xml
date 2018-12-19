@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ff3997ee" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/com_tencent_ysdk_real_name_dialog_webview_title" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/com_tencent_ysdk_real_name_webview_dialog_close" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/com_tencent_ysdk_real_name_btn_close" android:scaleType="center" android:minWidth="40.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <WebView android:id="@id/com_tencent_ysdk_real_name_webview_dialog_webview" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

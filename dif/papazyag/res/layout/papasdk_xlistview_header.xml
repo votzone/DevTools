@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/xlistview_header_content" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/xlistview_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:id="@id/xlistview_header_hint_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xlistview_header_hint_normal" style="@style/TextViewStyle_10sp" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xlistview_header_last_time" />
+                <TextView android:textSize="12.0sp" android:id="@id/xlistview_header_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/xlistview_header_arrow" android:visibility="gone" android:layout_width="@dimen/progress_drawable_w" android:layout_height="@dimen/progress_drawable_w" android:layout_marginLeft="-35.0dip" android:src="@drawable/papasdk_loding_progress" android:layout_alignLeft="@id/xlistview_header_text" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/xlistview_header_progressbar" android:visibility="invisible" android:layout_width="@dimen/progress_drawable_w" android:layout_height="@dimen/progress_drawable_w" android:layout_marginLeft="-40.0dip" android:indeterminate="true" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/papasdk_loding_progress" android:indeterminateDuration="1000" android:layout_alignLeft="@id/xlistview_header_text" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

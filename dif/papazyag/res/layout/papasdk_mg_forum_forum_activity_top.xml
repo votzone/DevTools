@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:padding="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <view android:layout_gravity="center" android:id="@id/forum_icon" android:layout_width="70.0dip" android:layout_height="70.0dip" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="fitXY" class="com.papa91.pay.widget.RoundedImageView" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_weight="1.0" android:layout_toRightOf="@id/forum_icon" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/mg_forum_forum_nickname_text_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/forum_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="论坛专区" android:singleLine="true" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/forumNum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/mg_forum_item_count_text_size" android:textColor="#ff555555" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="浏览" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/mg_forum_item_count_text_size" android:textColor="#ffe34606" android:id="@id/forum_users_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mg_forum_item_count_margin_left" android:text="0" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/mg_forum_item_count_text_size" android:textColor="#ff555555" android:id="@id/textView14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mg_forum_item_count_item_margin_left" android:text="帖子" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/mg_forum_item_count_text_size" android:textColor="#ffe34606" android:id="@id/forum_posts_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mg_forum_item_count_margin_left" android:text="0" android:singleLine="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/mg_forum_item_count_text_size" android:textColor="#ff555555" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mg_forum_item_count_item_margin_left" android:text="关注" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/mg_forum_item_count_text_size" android:textColor="#ffe34606" android:id="@id/forum_follow_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mg_forum_item_count_margin_left" android:text="0" android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textSize="@dimen/mg_forum_item_count_text_size" android:textColor="#ff787878" android:gravity="center_vertical" android:id="@id/forumDescTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <ImageView android:gravity="center" android:layout_gravity="center|right" android:id="@id/forumFollowBtn" android:clickable="true" android:layout_width="60.0dip" android:layout_height="30.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/papasdk_forum_follow" />
+    </LinearLayout>
+</RelativeLayout>

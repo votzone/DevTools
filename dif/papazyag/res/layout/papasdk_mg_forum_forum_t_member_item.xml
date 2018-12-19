@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@android:color/white" android:padding="@dimen/mg_forum_post_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <view android:id="@id/avatar" android:layout_width="42.0dip" android:layout_height="42.0dip" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="centerCrop" class="com.papa91.pay.widget.RoundedImageView" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="42.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="15.0sp" android:textColor="#ff353535" android:gravity="center_vertical" android:id="@id/nickName" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="昵称" android:layout_weight="1.0" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffa9a9a9" android:gravity="center_vertical" android:id="@id/desc" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="时间" android:layout_weight="1.0" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/follow" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip">
+            <ImageView android:layout_gravity="right" android:id="@id/followImg" android:visibility="gone" android:layout_width="62.0dip" android:layout_height="24.0dip" android:src="@drawable/papasdk_forum_follow_1" android:layout_centerVertical="true" />
+            <ImageView android:layout_gravity="right" android:id="@id/followedImg" android:visibility="gone" android:layout_width="59.0dip" android:layout_height="27.0dip" android:src="@drawable/papasdk_forum_unfollow_1" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

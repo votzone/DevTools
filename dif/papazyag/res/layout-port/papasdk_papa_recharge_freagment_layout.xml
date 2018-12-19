@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/xxx" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="false">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <LinearLayout android:id="@id/xxxxxx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp15">
+                    <ImageView android:id="@id/chinamobileIv" android:layout_width="fill_parent" android:layout_height="45.0dip" android:src="@drawable/papasdk_yidong_papa" android:layout_weight="1.0" />
+                    <ImageView android:id="@id/chinaunicomIv" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/papasdk_liantong2_papa" android:layout_weight="1.0" />
+                    <ImageView android:id="@id/chinateleIv" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/papasdk_dianxin2_papa" android:layout_weight="1.0" />
+                </LinearLayout>
+                <TextView android:textColor="#ffaaaaaa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="说明: 充值卡面额必须与实际充值金额一致" />
+                <LinearLayout android:orientation="vertical" android:id="@id/allow" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textColor="#ffef420d" android:gravity="center_vertical" android:id="@id/spinner" android:background="@drawable/papasdk_pay_shuruk_papa" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="5.0dip" android:text="面值100元" android:layout_centerVertical="true" />
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                        <ImageView android:layout_width="fill_parent" android:layout_height="40.0dip" android:src="@drawable/papasdk_pay_shuruk_papa" android:scaleType="fitXY" android:layout_centerVertical="true" />
+                        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="卡号" />
+                            <EditText android:textSize="13.0sp" android:textColor="#ff5d5d5d" android:textColorHint="#ffaaaaaa" android:id="@id/rechargecardInputCardno" android:background="@null" android:layout_width="fill_parent" android:layout_height="40.0dip" android:hint="请输入充值卡号" android:inputType="number" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                        <ImageView android:layout_width="fill_parent" android:layout_height="40.0dip" android:src="@drawable/papasdk_pay_shuruk_papa" android:scaleType="fitXY" android:layout_centerVertical="true" />
+                        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="密码" />
+                            <EditText android:textSize="13.0sp" android:textColor="#ff5d5d5d" android:textColorHint="#ffaaaaaa" android:id="@id/rechargecardInputCardpass" android:background="@null" android:layout_width="fill_parent" android:layout_height="30.0dip" android:hint="请输入充值密码" android:inputType="number" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <TextView android:id="@id/refuse" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="无对应面额请选用其他支付方式" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="dimen" name="action_btn_height" id="0x7f05004b" />
+    <public type="dimen" name="activity_horizontal_margin" id="0x7f05004c" />
+    <public type="dimen" name="activity_vertical_margin" id="0x7f05004d" />
+    <public type="string" name="action_settings" id="0x7f0b0027" />
+    <public type="string" name="alipay_text" id="0x7f0b0028" />
+    <public type="string" name="auth_login_text" id="0x7f0b002a" />
+    <public type="string" name="logout" id="0x7f0b002b" />
+    <public type="string" name="pay_text" id="0x7f0b002c" />
+    <public type="string" name="union_pay_text" id="0x7f0b002f" />
+    <public type="string" name="weixin_pay_text" id="0x7f0b0030" />
+    <public type="xml" name="file_paths" id="0x7f0e0000" />
+</resources>

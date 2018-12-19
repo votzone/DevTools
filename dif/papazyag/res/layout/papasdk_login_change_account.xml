@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_show" android:padding="@dimen/dp52" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:background="@drawable/papasdk_papalogin_editback" android:layout_width="fill_parent" android:layout_height="@dimen/dp117">
+        <AutoCompleteTextView android:enabled="false" android:textSize="@dimen/sp40" android:textColor="#ff3c3c3c" android:textColorHint="#ffc4c4c4" android:gravity="center_vertical" android:id="@id/username" android:background="#00000000" android:paddingLeft="@dimen/dp150" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="悟饭账号/手机账号/昵称" android:singleLine="true" android:dropDownSelector="#ffffffff" android:layout_centerVertical="true" android:imeOptions="actionNext" />
+        <ImageView android:id="@id/userIcon" android:layout_width="@dimen/dp57" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp36" android:src="@drawable/papasdk_papalogin_tourist_icon" android:layout_centerVertical="true" />
+        <TextView android:id="@id/textView" android:background="#ffc4c4c4" android:layout_width="@dimen/dp1" android:layout_height="@dimen/dp52" android:layout_marginLeft="@dimen/dp36" android:text="New Text" android:layout_toRightOf="@id/userIcon" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="false" />
+        <ImageView android:id="@id/moreUser" android:padding="@dimen/dp37" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/papasdk_more_user_butn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp117" android:layout_marginTop="@dimen/dp57">
+        <Button android:textSize="@dimen/sp46" android:textColor="@android:color/white" android:id="@id/login" android:background="@drawable/papasdk_papalogin_redbutn_seleter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="进入游戏" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/zz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp57">
+        <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <Button android:layout_gravity="right" android:id="@id/textView3" android:background="@drawable/papasdk_papalogin_type_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

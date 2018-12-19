@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/com_tencent_ysdk_icon_content" android:background="@drawable/com_tencent_ysdk_icon_admin_apply_bg" android:paddingLeft="69.0dip" android:visibility="visible" android:layout_width="195.0dip" android:layout_height="85.0dip" android:layout_centerVertical="true">
+        <TextView android:textSize="13.0sp" android:textColor="#ffc3e7ff" android:id="@id/com_tencent_ysdk_icon_tv_speedup_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="报告，加速成功" android:singleLine="true" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffc3e7ff" android:id="@id/com_tencent_ysdk_icon_tv_mem_free_tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%s内存已清理" />
+    </LinearLayout>
+    <ImageView android:id="@id/com_tencent_ysdk_icon_iv_rocket" android:visibility="visible" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginLeft="-5.0dip" android:src="@drawable/com_tencent_ysdk_icon_admin_apply_rocket" android:layout_alignParentLeft="true" />
+    <View android:id="@id/com_tencent_ysdk_icon_flash_line" android:background="@drawable/com_tencent_ysdk_icon_admin_apply_flash" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="17.5dip" android:layout_centerVertical="true" />
+</RelativeLayout>

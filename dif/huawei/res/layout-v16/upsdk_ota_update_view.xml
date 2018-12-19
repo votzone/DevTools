@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ScrollView android:scrollbarStyle="outsideOverlay" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/divider" android:layout_width="fill_parent" android:layout_height="16.0dip" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/name_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upsdk_ota_app_name" android:alpha="0.5" android:fontFamily="HwChinese-medium" />
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:id="@id/name_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:fontFamily="HwChinese-medium" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/version_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upsdk_app_version" android:alpha="0.5" android:fontFamily="HwChinese-medium" />
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:id="@id/version_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:fontFamily="HwChinese-medium" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/size_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upsdk_app_size" android:alpha="0.5" android:fontFamily="HwChinese-medium" />
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:id="@id/appsize_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:fontFamily="HwChinese-medium" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/upsdk_detail" android:fontFamily="HwChinese-medium" />
+                    <TextView android:textSize="@dimen/upsdk_dialog_subtitle_size" android:textColor="@color/upsdk_black" android:id="@id/content_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:lineSpacingMultiplier="1.1" android:alpha="0.5" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

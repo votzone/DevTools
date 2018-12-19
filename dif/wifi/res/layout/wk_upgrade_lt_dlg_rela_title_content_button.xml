@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/wk_upgrade_ic_dlg_border_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/lt_dlg_rela_frame_title" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <View android:id="@id/lt_dlg_rela_frame_line0" android:background="#ff8ac4f3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/lt_dlg_rela_frame_title" />
+    <LinearLayout android:gravity="center|left" android:orientation="vertical" android:id="@id/lt_dlg_rela_frame_message" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/lt_dlg_rela_frame_title">
+        <View android:background="#ff8ac4f3" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/lt_dlg_rela_frame_title" />
+    </LinearLayout>
+    <View android:id="@id/wk_upgrade_lt_dlg_rela_frame_line1" android:background="#ff666666" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/lt_dlg_rela_frame_message" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/wk_upgrade_lt_dlg_rela_frame_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/wk_upgrade_lt_dlg_rela_frame_line1">
+        <Button android:textColor="@color/wk_upgrade_lt_dlg_btn_cancel" android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_left" style="@style/wk_upgrade_Lt_Dlg_Button" />
+        <View android:background="#ff666666" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textColor="@color/wk_upgrade_lt_dlg_btn_ok" android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_center" style="@style/wk_upgrade_Lt_Dlg_Button" />
+        <View android:background="#ff666666" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textColor="@color/wk_upgrade_lt_dlg_btn_ok" android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_right" style="@style/wk_upgrade_Lt_Dlg_Button" />
+    </LinearLayout>
+</RelativeLayout>

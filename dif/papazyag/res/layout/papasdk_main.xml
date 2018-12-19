@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/startpay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="开始支付" android:onClick="startpay" />
+    <Button android:id="@id/starlogin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="开始登录" android:onClick="starlogin" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/showmessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Large Text" />
+    <Button android:id="@id/forum" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="社区" android:onClick="forum" />
+    <Button android:id="@id/loginOut" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="退出" android:onClick="loginOut" />
+    <ScrollView android:id="@id/scrollView" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Button android:id="@id/weichart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="微信支付" />
+            <Button android:id="@id/getOrder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="支付宝获取订单号" />
+            <Button android:id="@id/unipay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="银联支付" />
+            <Button android:id="@id/mo9pay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="先玩后付mo9" />
+            <Button android:id="@id/junwangpay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="骏网卡" />
+            <Button android:id="@id/yidong" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="移动充值卡" />
+            <Button android:id="@id/liantong" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="联通充值卡" />
+            <Button android:id="@id/dianxin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电信充值卡。" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

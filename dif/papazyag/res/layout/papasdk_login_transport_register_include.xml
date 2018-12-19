@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/dp52" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:background="@drawable/papasdk_papalogin_editback" android:layout_width="fill_parent" android:layout_height="@dimen/dp117">
+        <EditText android:textSize="@dimen/sp40" android:textColor="#ff3c3c3c" android:textColorHint="#ffc4c4c4" android:gravity="center_vertical" android:id="@id/accountEdit" android:background="#00000000" android:paddingLeft="@dimen/dp150" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:layout_centerVertical="true" android:imeOptions="actionNext" />
+        <ImageView android:id="@id/userIcon" android:layout_width="@dimen/dp57" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp36" android:src="@drawable/papasdk_papalogin_username_icon" android:layout_centerVertical="true" />
+        <TextView android:id="@id/textView" android:background="#ffc4c4c4" android:layout_width="@dimen/dp1" android:layout_height="@dimen/dp52" android:layout_marginLeft="@dimen/dp36" android:text="New Text" android:layout_toRightOf="@id/userIcon" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="false" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/relativeLayout" android:background="@drawable/papasdk_papalogin_editback" android:layout_width="fill_parent" android:layout_height="@dimen/dp117" android:layout_marginTop="@dimen/dp57">
+        <AutoCompleteTextView android:enabled="true" android:textSize="@dimen/sp40" android:textColor="#ff3c3c3c" android:textColorHint="#ffc4c4c4" android:gravity="center_vertical" android:id="@id/passEdit" android:background="#00000000" android:paddingLeft="@dimen/dp150" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:maxLength="16" android:layout_centerVertical="true" android:imeOptions="actionDone" />
+        <ImageView android:id="@id/adview" android:layout_width="@dimen/dp57" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp36" android:src="@drawable/papasdk_papalogin_passicon" android:layout_centerVertical="true" />
+        <TextView android:id="@id/textView2" android:background="#ffc4c4c4" android:layout_width="@dimen/dp1" android:layout_height="@dimen/dp52" android:layout_marginLeft="@dimen/dp36" android:text="New Text" android:layout_toRightOf="@id/adview" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="false" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp117" android:layout_marginTop="@dimen/dp57">
+        <Button android:textSize="@dimen/sp46" android:textColor="@android:color/white" android:id="@id/reginFinish" android:background="@drawable/papasdk_papalogin_redbutn_seleter" android:layout_width="fill_parent" android:layout_height="@dimen/dp117" android:text="快速游戏" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/zz" android:layout_width="fill_parent" android:layout_height="@dimen/dp67" android:layout_marginTop="@dimen/dp57">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/sp40" android:textColor="#fff9a435" android:ellipsize="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="*建议您截图保存帐号密码信息" android:singleLine="true" />
+            <TextView android:textSize="@dimen/sp40" android:textColor="@color/grey_2" android:ellipsize="none" android:id="@id/textView3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="其他方式登录：" android:singleLine="true" />
+            <ImageView android:id="@id/accountlogin" android:visibility="gone" android:layout_width="@dimen/dp64" android:layout_height="@dimen/dp64" android:layout_marginLeft="@dimen/dp22" android:src="@drawable/papasdk_usericon" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp40" android:textColor="#ff3a85e2" android:gravity="center" android:id="@id/backlogin" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="返回登录" />
+    </LinearLayout>
+</LinearLayout>

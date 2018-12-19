@@ -1,0 +1,14 @@
+    <color name="action_bn_text_color">#ffffffff</color>
+    <color name="apk_list_bg">#ffedf2f4</color>
+    <color name="colorAccent">#ffff4081</color>
+    <color name="colorPrimary">#ff3f51b5</color>
+    <color name="colorPrimaryDark">#ff303f9f</color>
+    <color name="com_tencent_ysdk_real_name_title_color">#ff3997ee</color>
+    <color name="desc_color">#ff8f8f8f</color>
+    <color name="download_btn_pressed">#0a000000</color>
+    <color name="download_btn_solid_disable">#fff4f4f4</color>
+    <color name="download_btn_stroke_disable">#ffe5e5e5</color>
+    <color name="download_btn_stroke_normal">#ff81d5ff</color>
+    <color name="floating_winddow_result_text_color_highlight">#fff19d18</color>
+    <color name="title_color">#ff2f2f2f</color>
+    <color name="white">#ffffffff</color>

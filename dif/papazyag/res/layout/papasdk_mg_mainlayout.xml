@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/activity_default_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/mg_mian_fragmentlayout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/main_content_margin_b" android:layout_weight="1.0" android:layout_alignParentLeft="false" android:layout_alignParentBottom="false" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/mainTab" android:background="@drawable/papasdk_mg_main_table_back" android:layout_width="fill_parent" android:layout_height="@dimen/main_content_margin_b" android:layout_alignParentBottom="true" />
+    <View android:id="@id/bottom" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignParentBottom="true" />
+    <VideoView android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <Button android:layout_gravity="center|left|top" android:id="@id/imageButton" android:background="#93000000" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="80.0dip" android:text="加载本地测试网页" />
+</RelativeLayout>

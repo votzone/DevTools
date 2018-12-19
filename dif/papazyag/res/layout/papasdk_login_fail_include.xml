@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/dp52" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/dp530">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/papasdk_papalogin_fail_icon" />
+        <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp75" android:text="你的手机上还没有登录过悟饭账号" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/zz" android:layout_width="fill_parent" android:layout_height="@dimen/dp67" android:layout_marginTop="@dimen/dp57">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/sp40" android:textColor="@color/grey_2" android:ellipsize="none" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="其他方式找回：" android:singleLine="true" />
+            <Button android:id="@id/imei" android:background="@drawable/papasdk_login_imei_butn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp22" />
+            <Button android:id="@id/his" android:background="@drawable/papasdk_login_his_butn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp22" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp40" android:textColor="#ff3a85e2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="返回登录" />
+    </LinearLayout>
+</LinearLayout>

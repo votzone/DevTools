@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/papasdk_exit_dialog_back" android:layout_width="298.0dip" android:layout_height="159.0dip" android:layout_margin="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="109.0dip" android:layout_weight="0.0">
+        <ImageView android:id="@id/dialog_title_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/papasdk_exit_dialog_normal_back" android:scaleType="centerCrop" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="17.0sp" android:textColor="@color/bluetooth_textcolor" android:id="@id/dialog_content" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="你确定要终止传输吗？" android:layout_toRightOf="@id/dialog_title_image" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View android:background="@color/bluetooth_line_textcolor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_weight="1.0">
+        <Button android:textSize="18.0sp" android:textColor="#ffcccccc" android:id="@id/dialog_button_close" android:background="@drawable/papasdk_exitdialog_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="退出" android:layout_weight="1.0" android:layout_alignParentLeft="false" />
+        <Button android:textSize="18.0sp" android:textColor="@color/main_yello_color" android:id="@id/dialog_button_keep" android:background="@drawable/papasdk_exitdialog_again_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="再玩一把" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

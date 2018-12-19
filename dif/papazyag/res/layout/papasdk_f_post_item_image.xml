@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingLeft="@dimen/mg_forum_post_item_padding" android:paddingTop="4.0dip" android:paddingRight="@dimen/mg_forum_post_item_padding" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="fitXY" />
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:id="@id/img_tag_gif" android:background="@color/forum_image_tag_gif_background" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GIF" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

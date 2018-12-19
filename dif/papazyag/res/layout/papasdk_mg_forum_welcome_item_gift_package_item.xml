@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/dividerTop" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:padding="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dividerTop">
+            <view android:layout_gravity="center" android:id="@id/forum_icon" android:layout_width="52.0dip" android:layout_height="52.0dip" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="fitXY" class="com.papa91.pay.widget.RoundedImageView" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_weight="1.0" android:layout_toRightOf="@id/forum_icon" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/mg_forum_forum_nickname_text_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/forum_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="礼包" android:singleLine="true" android:layout_weight="1.0" />
+                <TextView android:textSize="12.0dip" android:textColor="#ff787878" android:gravity="center_vertical" android:id="@id/forumDescTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="礼包" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" />
+            </LinearLayout>
+            <RelativeLayout android:orientation="vertical" android:id="@id/deleteLayout" android:clickable="true" android:layout_width="40.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="right" android:id="@id/delete" android:background="@drawable/papasdk_gift_delete" android:layout_width="16.0dip" android:layout_height="17.0dip" android:layout_marginTop="2.0dip" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip">
+            <TextView android:textSize="14.0dip" android:textColor="#ffa5a5a5" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/cdkNum" android:background="@drawable/papasdk_shape_gift_package_cdk_bg" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="28.0dip" android:text="Medium Text" android:singleLine="true" android:layout_weight="1.0" />
+            <Button android:textSize="14.0dip" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/actionButton" android:background="@drawable/papasdk_receive_orange" android:layout_width="54.0dip" android:layout_height="28.0dip" android:layout_marginLeft="@dimen/f_padding_lr" android:text="领取" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</LinearLayout>

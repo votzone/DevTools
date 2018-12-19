@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="#fff47500" android:id="@id/sectionTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/f_padding_lr" android:layout_marginTop="6.0dip" android:layout_marginRight="@dimen/f_padding_lr" android:layout_marginBottom="6.0dip" android:text="最新礼包" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:background="@android:color/white" android:paddingLeft="@dimen/f_padding_lr" android:paddingRight="@dimen/f_padding_lr" android:layout_width="fill_parent" android:layout_height="78.0dip" android:layout_below="@id/sectionTitle" android:layout_alignParentLeft="true">
+        <view android:layout_gravity="center" android:id="@id/forum_icon" android:layout_width="52.0dip" android:layout_height="52.0dip" android:layout_marginRight="@dimen/f_padding_lr" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="fitXY" class="com.papa91.pay.widget.RoundedImageView" />
+        <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/linearLayout3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="悟饭专区礼包" android:singleLine="true" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/tag" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="15.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/papasdk_icon_papa_exclusive" />
+            </LinearLayout>
+            <TextView android:textSize="12.0dip" android:textColor="#ff8a8a8a" android:gravity="center_vertical" android:id="@id/giftDesc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="悟饭专区礼包 描述" android:maxLines="2" android:minLines="2" android:layout_weight="1.0" android:layout_below="@id/linearLayout3" android:layout_alignParentLeft="false" android:layout_alignParentBottom="false" />
+        </RelativeLayout>
+        <Button android:textSize="12.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/actionButton" android:background="@drawable/papasdk_received" android:layout_width="54.0dip" android:layout_height="24.0dip" android:layout_marginLeft="@dimen/f_padding_lr" android:src="@drawable/papasdk_received" />
+    </LinearLayout>
+    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

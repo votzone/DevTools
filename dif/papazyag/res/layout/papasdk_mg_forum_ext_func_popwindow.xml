@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/papasdk_shape_forum_ext_func_popwindow_bg" android:layout_width="@dimen/mg_forum_ext_func_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/extFuncShare" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:id="@id/extFuncShareTv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="分享" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/extFuncFavorite" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:id="@id/extFuncFavoriteTv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="收藏" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/extFuncBest" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:id="@id/extFuncBestTv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="加精" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/extFuncReply" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="回复" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/extFuncReport" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="举报" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/extFuncDelete" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="删除" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/extFuncCancel" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="取消" />
+    </LinearLayout>
+</LinearLayout>

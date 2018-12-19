@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/activity_default_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/actionbarLayout" layout="@layout/papasdk_mg_forum_title_layout" />
+    <view android:id="@id/loadingView" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.papa91.pay.widget.ForumLoadingView">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/f_padding_lr">
+                        <view android:layout_gravity="center" android:id="@id/giftIcon" android:layout_width="52.0dip" android:layout_height="52.0dip" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="fitXY" class="com.papa91.pay.widget.RoundedImageView" />
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_weight="1.0" android:layout_toRightOf="@id/forum_icon" android:layout_centerVertical="true">
+                            <TextView android:textSize="@dimen/mg_forum_forum_nickname_text_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/giftName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="礼包" android:singleLine="true" android:layout_weight="1.0" />
+                            <TextView android:textSize="12.0dip" android:textColor="#ffa5a5a5" android:gravity="center_vertical" android:id="@id/giftExpireDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="描述" android:singleLine="true" android:layout_weight="1.0" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/giftRetainLayout" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                            <TextView android:textSize="12.0dip" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_gravity="center|right" android:id="@id/giftRetainTop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="剩余" android:singleLine="true" android:layout_weight="1.0" />
+                            <TextView android:textSize="@dimen/mg_forum_forum_nickname_text_size" android:textColor="#fff9a435" android:gravity="center" android:layout_gravity="center|right" android:id="@id/giftRetain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cdk_propotion" android:singleLine="true" android:layout_weight="1.0" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/oemTypeLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/f_padding_lr" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/f_padding_lr" android:layout_marginBottom="10.0dip">
+                        <TextView android:textSize="14.0dip" android:textColor="#ffa5a5a5" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/cdkNum" android:background="@drawable/papasdk_shape_gift_package_cdk_bg" android:padding="4.0dip" android:layout_width="0.0dip" android:layout_height="34.0dip" android:text="@string/receive_cdk_tip" android:singleLine="true" android:layout_weight="1.0" />
+                        <Button android:textSize="14.0dip" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/receiveButton" android:background="@drawable/papasdk_receive_orange" android:layout_width="54.0dip" android:layout_height="34.0dip" android:layout_marginLeft="@dimen/f_padding_lr" android:text="领取" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/oemTypeLayout2" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/f_padding_lr" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/f_padding_lr" android:layout_marginBottom="10.0dip">
+                        <Button android:textSize="14.0dip" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/goToOem" android:background="@drawable/papasdk_receive_orange" android:layout_width="fill_parent" android:layout_height="34.0dip" android:text="@string/receive_cdk_button2" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/oemTypeLayout3" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/f_padding_lr" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/f_padding_lr" android:layout_marginBottom="10.0dip">
+                        <Button android:textSize="14.0dip" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/oemType3Tip" android:background="@drawable/papasdk_receive_gray" android:layout_width="fill_parent" android:layout_height="34.0dip" android:text="@string/receive_cdk_button5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0">
+                        <LinearLayout android:orientation="vertical" android:padding="@dimen/f_padding_lr" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0">
+                            <TextView android:textSize="11.0dip" android:textColor="#ff3a85e2" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/giftTip" android:background="@drawable/papasdk_gift_tip_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="@string/gift_tip" android:singleLine="true" />
+                            <TextView android:textColor="#fff47500" android:id="@id/giftTitle" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="礼包内容：" android:layout_weight="1.0" />
+                            <TextView android:textColor="#ff616161" android:id="@id/giftContent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="6.0dip" android:text="内容" android:layout_weight="1.0" />
+                            <TextView android:textColor="#fff47500" android:id="@id/giftUseTitle" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="8.0dip" android:text="使用方法：" android:layout_weight="1.0" />
+                            <TextView android:textColor="#ff616161" android:id="@id/giftUseContent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="6.0dip" android:text="方法" android:layout_weight="1.0" />
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/myGiftPackage" android:background="@drawable/papasdk_gift_package_green" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip">
+                    <ImageView android:id="@id/imageView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/papasdk_gift_package_white" />
+                    <TextView android:textSize="18.0dip" android:textColor="@android:color/white" android:id="@id/myGiftPackageCount" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的礼包箱" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </view>
+</LinearLayout>

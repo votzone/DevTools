@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="冒险" android:onClick="getReward" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="购买金币" android:onClick="buyCoin" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="居中广告" android:onClick="showCenterAds" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="横幅" android:onClick="showBanner" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="激励视频" android:onClick="showRewardVedio" />
+</LinearLayout>

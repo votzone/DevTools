@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/goSendPost" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="主题帖" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/goSendHelp" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="求助帖" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/cancel" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_height">
+        <View android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_ext_func_item_divider" />
+        <TextView android:textSize="@dimen/mg_forum_ext_func_item_tv_size" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="取消" />
+    </LinearLayout>
+</LinearLayout>

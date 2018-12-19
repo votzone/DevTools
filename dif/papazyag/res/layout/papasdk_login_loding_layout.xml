@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#c80c0c0c" android:layout_width="fill_parent" android:layout_height="@dimen/dp127">
+        <Button android:textSize="@dimen/sp45" android:textColor="@color/white" android:id="@id/changeAccount" android:background="@drawable/papasdk_papalogin_greenbutn_seleter" android:layout_width="@dimen/dp262" android:layout_height="@dimen/dp90" android:layout_marginRight="@dimen/dp63" android:text="切换账号" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/sp45" android:textColor="@color/white" android:id="@id/loginMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp27" android:text=" 正在登录..." android:layout_toRightOf="@id/adview" android:layout_centerVertical="true" android:textIsSelectable="false" />
+        <ImageView android:id="@id/adview" android:visibility="gone" android:layout_width="@dimen/dp78" android:layout_height="@dimen/dp78" android:layout_marginLeft="@dimen/dp36" android:src="@drawable/papasdk_papa_notice_icon" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

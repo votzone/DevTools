@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/cancel" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/com_tencent_ysdk_auth_icon_close" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:layout_marginBottom="19.0dip">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/yyb_logo" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/com_tencent_ysdk_logo" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/msg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:singleLine="true" android:includeFontPadding="false" />
+        <Button android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/comfirm_button" android:background="@drawable/com_tencent_ysdk_auth_button_bg" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginTop="17.0dip" android:minWidth="64.0dip" android:singleLine="true" />
+    </LinearLayout>
+    <View android:layout_width="0.0px" android:layout_height="0.0px" android:layout_below="@id/content" />
+</RelativeLayout>

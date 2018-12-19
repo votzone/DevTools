@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/actionbarLayout" android:visibility="visible" layout="@layout/papasdk_mg_forum_title_layout" />
+    <view android:id="@id/loadingView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/actionbarLayout" class="com.papa91.pay.widget.ForumLoadingView">
+        <view android:id="@id/web" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.papa91.pay.widget.LJWebView" />
+    </view>
+    <FrameLayout android:id="@id/video_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

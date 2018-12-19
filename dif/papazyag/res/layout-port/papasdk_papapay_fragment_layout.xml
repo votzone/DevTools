@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/coupon" android:background="@drawable/papasdk_expand_bg_papa" android:layout_width="fill_parent" android:layout_height="@dimen/dp142" android:baselineAligned="false">
+        <ImageView android:id="@id/imageView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp24" android:layout_marginRight="@dimen/dp14" android:src="@drawable/papasdk_papa_coupon_icon" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dp15" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/sp39" android:textColor="#ff6e5336" android:gravity="center_vertical" android:id="@id/papa_copuon_notice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="游戏代金券" />
+            <TextView android:textSize="@dimen/dp33" android:textColor="#ff9e7439" android:id="@id/noteText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(暂不支持和啪币，红包混合使用)" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp39" android:textColor="#ffa9a9a9" android:id="@id/papa_copuon_select_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp33" android:text="没有可用代金券" />
+        <ImageView android:id="@id/adview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp15" android:src="@drawable/papasdk_papa_more" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dp13">
+        <RelativeLayout android:id="@id/pabiPay" android:background="@drawable/papasdk_expand_bg_papa" android:layout_width="fill_parent" android:layout_height="@dimen/dp286" android:layout_marginBottom="@dimen/dp13" android:layout_weight="0.0">
+            <CheckBox android:id="@id/pabiCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp45" android:layout_marginRight="@dimen/dp45" android:checked="false" android:button="@drawable/papasdk_papa_check_butn" android:layout_alignParentRight="true" />
+            <ImageView android:id="@id/imageView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp24" android:layout_marginTop="@dimen/dp27" android:src="@drawable/papasdk_papa_pabi_icon" />
+            <TextView android:textSize="@dimen/sp39" android:textColor="#ff6e5336" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp24" android:text="啪币支付" android:layout_toRightOf="@id/imageView2" android:layout_alignTop="@id/imageView2" />
+            <TextView android:textSize="@dimen/sp39" android:textColor="#ffa9a9a9" android:id="@id/pabiNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp42" android:text="啪币余额：" android:layout_below="@id/textView" android:layout_alignLeft="@id/textView" />
+            <TextView android:textSize="@dimen/sp33" android:textColor="#fff9961e" android:gravity="center_vertical" android:id="@id/getPabi" android:layout_width="wrap_content" android:layout_height="@dimen/dp120" android:layout_marginRight="@dimen/dp45" android:text="如何获取啪币？" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/hongbaoPay" android:background="@drawable/papasdk_expand_bg_papa" android:layout_width="fill_parent" android:layout_height="@dimen/dp286" android:layout_weight="0.0">
+            <CheckBox android:id="@id/hongbaoCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp45" android:layout_marginRight="@dimen/dp45" android:checked="false" android:button="@drawable/papasdk_papa_check_butn" android:layout_alignParentRight="true" />
+            <ImageView android:id="@id/imageView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp24" android:layout_marginTop="@dimen/dp27" android:src="@drawable/papasdk_papa_hongbao_icon" />
+            <TextView android:textSize="@dimen/sp39" android:textColor="#ff6e5336" android:id="@id/hongbaoPAyText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp24" android:text="红包支付" android:layout_toRightOf="@id/imageView3" android:layout_alignTop="@id/imageView3" />
+            <TextView android:textSize="@dimen/sp39" android:textColor="#ffa9a9a9" android:id="@id/hongbaoNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp42" android:text="啪币余额：" android:layout_below="@id/hongbaoPAyText" android:layout_alignLeft="@id/hongbaoPAyText" />
+            <TextView android:textSize="@dimen/sp33" android:textColor="#fff9961e" android:gravity="center_vertical" android:id="@id/getHongbao" android:layout_width="wrap_content" android:layout_height="@dimen/dp120" android:layout_marginRight="@dimen/dp45" android:text="如何获取红包？" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

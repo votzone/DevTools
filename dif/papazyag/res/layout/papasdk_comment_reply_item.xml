@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="5.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/mg_forum_comment_reply_text_size" android:textColor="#ff6a6a6a" android:gravity="center|left" android:id="@id/comment_reply_content" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="false" />
+    <TextView android:textSize="@dimen/mg_forum_comment_reply_text_size" android:textColor="#ff2a72cb" android:gravity="center|right" android:id="@id/comment_reply_more" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="更多0条回复..." />
+</LinearLayout>

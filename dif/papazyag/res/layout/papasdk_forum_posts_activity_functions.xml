@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/row1" android:layout_width="fill_parent" android:layout_height="@dimen/forum_posts_activity_functions_min_height"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/moreFuncFavorite" android:background="@drawable/papasdk_forum_posts_func_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/moreFuncFavoriteImg" android:layout_width="24.0dip" android:layout_height="22.0dip" android:src="@drawable/papasdk_more_func_favorite" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="收藏" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/moreFuncShare" android:background="@drawable/papasdk_forum_posts_func_bg" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/moreFuncShareImg" android:layout_width="24.0dip" android:layout_height="22.0dip" android:src="@drawable/papasdk_more_func_share" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="分享" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/moreFuncSort" android:background="@drawable/papasdk_forum_posts_func_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/moreFuncSortImg" android:layout_width="24.0dip" android:layout_height="22.0dip" android:src="@drawable/papasdk_more_func_alphabet" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="倒序查看" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/row2" android:layout_width="fill_parent" android:layout_height="@dimen/forum_posts_activity_functions_min_height"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/moreFuncReport" android:background="@drawable/papasdk_forum_posts_func_bg" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/moreFuncReportImg" android:layout_width="24.0dip" android:layout_height="22.0dip" android:src="@drawable/papasdk_more_func_report" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="举报" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/moreFuncDelete" android:background="@drawable/papasdk_forum_posts_func_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/moreFuncDeleteImg" android:layout_width="24.0dip" android:layout_height="22.0dip" android:src="@drawable/papasdk_more_func_delete" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="删除" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/moreFuncBest" android:background="@drawable/papasdk_forum_posts_func_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/moreFuncBestImg" android:layout_width="24.0dip" android:layout_height="22.0dip" android:src="@drawable/papasdk_more_func_best_default" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="加精" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/block1" android:background="@drawable/papasdk_forum_posts_func_bg" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/block2" android:background="@drawable/papasdk_forum_posts_func_bg" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

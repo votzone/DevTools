@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loding_faile" android:paddingBottom="60.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/common_bar_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/relodingimag" android:layout_width="75.0dip" android:layout_height="75.0dip" android:src="@drawable/papasdk_reload_butn_selector" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff908f8f" android:id="@id/failedMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="网络连接失败，再试试吧~" />
+    <ImageView android:id="@id/lodingBackImage" android:background="#ffcdcdcd" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="80.0dip" android:layout_marginTop="11.0dip" android:layout_marginRight="80.0dip" android:layout_marginBottom="11.0dip" />
+    <ImageView android:id="@id/setNetwork" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/papasdk_set_net_butn" />
+    <TextView android:textSize="13.0sp" android:textColor="#fffa923e" android:gravity="center" android:id="@id/setting" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="随便逛逛" />
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingLeft="@dimen/mg_forum_post_item_padding" android:paddingTop="5.0dip" android:paddingRight="@dimen/mg_forum_post_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/relateLayoutApp" android:background="@drawable/papasdk_forum_post_game_bg" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/mgListviewItemIcon" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/app_list_margin" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_toLeftOf="@id/rLayoutRight" android:layout_toRightOf="@id/mgListviewItemIcon" android:layout_centerVertical="true">
+            <TextView android:id="@id/mgListviewItemAppname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="纪念碑谷破解版" android:singleLine="true" style="@style/TextViewStyle_12sp_black" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+                <TextView android:id="@id/appSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/my_game_appsizemagin_t" android:text="1" android:layout_weight="1.0" style="@style/TextViewStyle_10sp" />
+                <TextView android:id="@id/loding_info" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/my_game_lodingtextmagin_t" android:layout_weight="0.0" style="@style/TextViewStyle_10sp" />
+            </LinearLayout>
+            <ProgressBar android:id="@id/progressBarZip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/my_game_progress_h" android:progress="0" style="@style/progress_zip_style" />
+            <ProgressBar android:id="@id/progressBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/my_game_progress_h" android:progress="0" style="@style/progress_style" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/tipsLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="-1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+            <TextView android:id="@id/mgListviewItemDescribe" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="" android:singleLine="true" android:layout_alignParentLeft="true" style="@style/TextViewStyle_10sp" />
+        </LinearLayout>
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/rLayoutRight" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="72.0dip" android:layout_marginLeft="@dimen/collection_margin" android:layout_marginBottom="5.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:textColor="@android:color/white" android:id="@id/mgListviewItemInstall" android:paddingBottom="13.0dip" android:focusable="false" android:focusableInTouchMode="true" android:src="@drawable/papasdk_download_game" android:layout_weight="0.0" style="@style/DownloadImageButnBigStyle" />
+            <TextView android:id="@id/mgListviewItemSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="11.0dip" android:text="5M" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/TextViewStyle_10sp" />
+        </RelativeLayout>
+        <View android:id="@id/line" android:visibility="gone" android:layout_alignBottom="@id/rLayoutRight" style="@style/TextViewStyle_line_H" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/video" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.papa91.pay.widget.video.MyVideoView" />
+    <ImageView android:id="@id/cover" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="fitXY" />
+    <include android:id="@id/loadingLayout" android:layout_width="@dimen/video_loading_size" android:layout_height="@dimen/video_loading_size" android:layout_centerInParent="true" layout="@layout/papasdk_video_loading_progress" />
+    <ImageView android:id="@id/play" android:background="@drawable/papasdk_mediacontroller_play_center" android:layout_width="@dimen/video_play_center_size" android:layout_height="@dimen/video_play_center_size" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/back" android:background="@drawable/papasdk_detial_mini_backbutn_selecter" android:visibility="gone" android:layout_width="@dimen/video_back_size" android:layout_height="@dimen/video_back_size" android:layout_margin="8.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+</RelativeLayout>

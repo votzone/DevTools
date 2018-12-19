@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/papasdk_bg_popupwindow" android:layout_width="wrap_content" android:layout_height="@dimen/mg_forum_popupwindow_height">
+        <Button android:textSize="13.0sp" android:textColor="#ff545454" android:id="@id/btn_forum_comment_delete" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="删除" android:layout_weight="1.0" />
+        <View android:id="@id/divider_forum_comment_1" android:background="#ffe0e0e0" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <Button android:textSize="13.0sp" android:textColor="#ff545454" android:id="@id/btn_forum_comment" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="回复" android:layout_weight="1.0" />
+        <View android:id="@id/divider_2" android:background="#ffe0e0e0" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <Button android:textSize="13.0sp" android:textColor="#ff545454" android:id="@id/btn_forum_report" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="举报" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

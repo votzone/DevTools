@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/activity_default_background" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/actionbarLayout" layout="@layout/papasdk_mg_forum_title_layout" />
+    <view android:id="@id/loadingView" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.papa91.pay.widget.ForumLoadingView">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <view android:id="@id/papa_listView" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" class="com.papa91.pay.widget.XListView" />
+            <FrameLayout android:id="@id/videoContainer" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include android:id="@id/videoLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/papasdk_video_layout" />
+            </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:id="@id/refresh" android:background="@drawable/papasdk_forum_refresh_bg" android:visibility="gone" android:clickable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/refreshImg" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/papasdk_forum_refresh" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <view android:id="@id/tabHover" android:background="#ffffffff" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/mg_forum_forum_activity_sliding_tab_height" class="com.papa91.pay.widget.SlidingTabForumLayout"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+        </RelativeLayout>
+    </view>
+</LinearLayout>

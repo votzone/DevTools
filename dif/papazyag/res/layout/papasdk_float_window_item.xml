@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/parent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+    <TextView android:textSize="8.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/badge" android:background="@drawable/papasdk_mygame_big_round" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginRight="3.0dip" android:layout_alignTop="@id/img" android:layout_alignRight="@id/img" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/com_tencent_ysdk_icon_floatwindow" android:background="#ff0a0b16" android:layout_width="54.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/com_tencent_ysdk_icon_xiaoxi_icon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginTop="25.0dip" android:src="@drawable/com_tencent_ysdk_icon_xiaoxi_icon" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/com_tencent_ysdk_icon_float_view_screen_capture" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="截屏" android:drawableTop="@drawable/com_tencent_ysdk_icon_screen_capture" android:drawablePadding="2.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <ScrollView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_above="@id/com_tencent_ysdk_icon_float_view_screen_capture" android:layout_below="@id/com_tencent_ysdk_icon_xiaoxi_icon" android:layout_centerHorizontal="true">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/com_tencent_ysdk_icon_float_view_vertical_Item" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </ScrollView>
+    <ImageView android:id="@id/com_tencent_ysdk_icon_mengban_icon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginTop="25.0dip" android:src="@drawable/com_tencent_ysdk_icon_head" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

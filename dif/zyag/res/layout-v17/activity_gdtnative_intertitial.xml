@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:id="@id/native_meng_container" android:background="#88000000" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <RelativeLayout android:gravity="center" android:id="@id/native_inter_container" android:background="@android:color/background_light" android:layout_width="340.0dip" android:layout_height="340.0dip" android:layout_centerInParent="true">
+        <ImageView android:id="@id/icon_iv" android:layout_width="60.0dip" android:layout_height="60.0dip" android:scaleType="fitXY" android:layout_below="@id/close_bn" android:layout_alignStart="@id/iv_main" />
+        <TextView android:textSize="@dimen/title_size" android:textColor="@color/title_color" android:ellipsize="end" android:gravity="center" android:id="@id/title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="23.0dip" android:maxEms="9" android:singleLine="true" android:layout_alignParentTop="true" android:layout_marginStart="93.0dip" android:layout_alignParentStart="true" />
+        <TextView android:textSize="@dimen/desc_size" android:textColor="@color/desc_color" android:ellipsize="end" android:gravity="center" android:id="@id/desc_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:maxEms="13" android:singleLine="true" android:layout_toRightOf="@id/icon_iv" android:layout_below="@id/title_tv" />
+        <ImageView android:id="@id/iv_main" android:layout_width="300.0dip" android:layout_height="250.0dip" android:layout_marginBottom="15.0dip" android:scaleType="fitCenter" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <Button android:id="@id/inter_bn" android:background="@android:color/transparent" android:layout_width="340.0dip" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <Button android:id="@id/close_bn" android:background="@drawable/close_button" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

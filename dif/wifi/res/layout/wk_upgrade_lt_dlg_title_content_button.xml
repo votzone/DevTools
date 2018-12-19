@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/wk_upgrade_popup_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="#ff8ac4f3" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center|left" android:orientation="vertical" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="#ff666666" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@color/wk_upgrade_lt_dlg_btn_cancel" android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_left" style="@style/wk_upgrade_Lt_Dlg_Button" />
+        <View android:background="#ff666666" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textColor="@color/wk_upgrade_lt_dlg_btn_ok" android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_center" style="@style/wk_upgrade_Lt_Dlg_Button" />
+        <View android:background="#ff666666" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textColor="@color/wk_upgrade_lt_dlg_btn_ok" android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_right" style="@style/wk_upgrade_Lt_Dlg_Button" />
+    </LinearLayout>
+</LinearLayout>

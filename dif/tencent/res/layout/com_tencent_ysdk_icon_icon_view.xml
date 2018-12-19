@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/com_tencent_ysdk_icon_icon_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/com_tencent_ysdk_icon_icon" android:visibility="visible" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/com_tencent_ysdk_icon_icon" android:scaleType="fitXY" android:contentDescription="@string/app_name" />
+    <ImageView android:id="@id/com_tencent_ysdk_icon_icon_redr" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-10.0dip" android:layout_marginTop="6.0dip" android:src="@drawable/com_tencent_ysdk_icon_red" android:layout_toRightOf="@id/com_tencent_ysdk_icon_icon" />
+    <ImageView android:id="@id/com_tencent_ysdk_icon_icon_redl" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="-15.0dip" android:src="@drawable/com_tencent_ysdk_icon_red" android:layout_toLeftOf="@id/com_tencent_ysdk_icon_icon" />
+</RelativeLayout>

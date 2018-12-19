@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/hms_game_id_buoy_hide_notice_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/top_notice_bg" android:background="@drawable/hms_game_hide_float_top" android:layout_width="fill_parent" android:layout_height="100.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginTop="8.0dip" android:layout_centerHorizontal="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/hms_game_id_buoy_hide_notice_bg" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/hms_game_hide_float_eye_off_gray" />
+            <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:layout_gravity="center_vertical" android:id="@id/top_notice_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/hms_game_auto_hide_notice" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="#fff99720" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/backBtn" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_margin="5.0dip" android:src="@drawable/papasdk_papa_back_btn" />
+        <LinearLayout android:layout_gravity="center|right" android:orientation="horizontal" android:id="@id/ad_lay" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip">
+            <ImageView android:id="@id/ad_top_img" android:layout_width="@dimen/dp54" android:layout_height="@dimen/dp54" />
+            <TextView android:textColor="@color/white" android:id="@id/ad_top_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ScrollView android:background="@drawable/papasdk_side_bg_papa" android:layout_width="100.0dip" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:id="@id/aliSwitch" android:background="@drawable/papasdk_side_bg_selected_papa" android:layout_width="100.0dip" android:layout_height="50.0dip">
+                        <TextView android:textColor="#ff9e5200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="支付宝" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:id="@id/webChatSwitch" android:background="@drawable/papasdk_side_bg_papa" android:layout_width="100.0dip" android:layout_height="50.0dip">
+                        <TextView android:textColor="#ff9e5200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="微信支付" />
+                    </LinearLayout>
+                    <FrameLayout android:gravity="center" android:id="@id/pabiSwitch" android:background="@drawable/papasdk_side_bg_papa" android:layout_width="100.0dip" android:layout_height="50.0dip">
+                        <ImageView android:layout_gravity="center" android:id="@id/papaimg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                        <TextView android:textColor="#ff9e5200" android:layout_gravity="center" android:id="@id/papatext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="悟饭" />
+                    </FrameLayout>
+                    <LinearLayout android:gravity="center" android:id="@id/unionSwitch" android:background="@drawable/papasdk_side_bg_papa" android:layout_width="100.0dip" android:layout_height="50.0dip">
+                        <TextView android:textColor="#ff9e5200" android:id="@id/yinlian" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="银联卡" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:id="@id/creditCardSwitch" android:background="@drawable/papasdk_side_bg_papa" android:layout_width="100.0dip" android:layout_height="50.0dip">
+                        <TextView android:textColor="#ff9e5200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="信用卡" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:id="@id/jingdongPay" android:background="@drawable/papasdk_side_bg_papa" android:layout_width="100.0dip" android:layout_height="50.0dip">
+                        <TextView android:textColor="#ff9e5200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="京东支付" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:id="@id/mo9Switch" android:background="@drawable/papasdk_side_bg_papa" android:layout_width="100.0dip" android:layout_height="50.0dip">
+                        <TextView android:textColor="#ff9e5200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="先玩后付" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:id="@id/rechargeSwitch" android:background="@drawable/papasdk_side_bg_papa" android:visibility="visible" android:layout_width="100.0dip" android:layout_height="50.0dip">
+                        <TextView android:textColor="#ff9e5200" android:id="@id/huafei" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="话费卡" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:id="@id/junwangSwitch" android:background="@drawable/papasdk_side_bg_papa" android:layout_width="100.0dip" android:layout_height="50.0dip">
+                        <TextView android:textColor="#ff9e5200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="骏网卡" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/zzzxxx" android:background="#fffefdeb" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textColor="#ff6e5336" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:layout_toLeftOf="@id/payMoney" android:layout_centerVertical="true" />
+                    <TextView android:textColor="#ffff0000" android:id="@id/payMoney" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="10元" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutRebate" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip">
+                    <ImageView android:id="@id/rebateImage" android:visibility="visible" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="10.0dip" android:layout_toLeftOf="@id/noPhone" android:layout_alignParentRight="false" android:layout_centerVertical="true" />
+                    <TextView android:textSize="12.0dip" android:textColor="#ff75726d" android:gravity="center_vertical" android:id="@id/rebateMessage" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp30" android:password="false" android:drawablePadding="@dimen/dp10" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout android:id="@id/mainContent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <TextView android:textColor="#ff5d5d5d" android:id="@id/amtLimit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp15" android:layout_marginBottom="@dimen/dp15" android:text="单笔支付金额最高不得超过2000元" />
+            <ImageView android:id="@id/startPay" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="@dimen/dp120" android:layout_marginBottom="5.0dip" android:src="@drawable/papasdk_xypay_confirm_papa" android:scaleType="centerCrop" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

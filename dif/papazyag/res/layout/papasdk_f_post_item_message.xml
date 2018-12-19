@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@android:color/white" android:paddingLeft="@dimen/mg_forum_post_item_padding" android:paddingRight="@dimen/mg_forum_post_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/mg_forum_post_message_text_size" android:textColor="#ff3b3b3b" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/forum_post_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正文" android:maxLines="2" android:lineSpacingMultiplier="1.2" />
+</LinearLayout>

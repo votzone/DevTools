@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:background="@drawable/wk_upgrade_dm_icon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="16.0dip" android:scaleType="centerCrop" android:contentDescription="@null" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+        <TextView android:textSize="15.0sp" android:id="@id/dm_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <ProgressBar android:id="@id/dm_notfy" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginTop="5.0dip" android:max="100" style="@style/DMProgress_horizontal" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffa3a8ab" android:id="@id/dm_state" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

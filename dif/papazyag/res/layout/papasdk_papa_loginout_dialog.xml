@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/dp604"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/adImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/papasdk_exit_dialog_normal_back" android:scaleType="fitXY" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/extApp" android:layout_width="fill_parent" android:layout_height="@dimen/dp140" android:src="@drawable/papasdk_papa_cancel_exit_btn" android:scaleType="fitXY" />
+            <TextView android:textColor="#ff5d5d5d" android:id="@id/extText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="退出游戏" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/enterForm" android:layout_width="fill_parent" android:layout_height="@dimen/dp140" android:src="@drawable/papasdk_papa_pay_btn" android:scaleType="fitXY" />
+            <TextView android:textColor="@color/white" android:id="@id/cancle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="进入社区" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

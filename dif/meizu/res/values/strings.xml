@@ -1,0 +1,8 @@
+    <string name="action_settings">Settings</string>
+    <string name="alipay_text">支付宝</string>
+    <string name="app_name">不要碰我（HD）</string>
+    <string name="auth_login_text">授权</string>
+    <string name="logout">退出</string>
+    <string name="pay_text">支付</string>
+    <string name="union_pay_text">联合支付</string>
+    <string name="weixin_pay_text">微信支付</string>

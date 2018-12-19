@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Button android:id="@id/login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="登录" />
+            <EditText android:id="@id/pamoney" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="充值金额单位为元精确到分如“1.02”" />
+            <Button android:id="@id/pay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="支付" />
+            <Button android:id="@id/extApp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="退出" />
+            <Button android:id="@id/creatRole" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="创建角色" />
+            <Button android:id="@id/changeAccount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="切换帐号" />
+            <Button android:id="@id/enterGame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="进入游戏接口" />
+            <TextView android:id="@id/msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="结果：" />
+            <Button android:id="@id/loadTestHtml" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="加载本地测试h5" />
+            <Button android:id="@id/showWebAdDialog" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="游戏触发网页弹窗" />
+            <Button android:id="@id/userCenter" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="个人中心" />
+            <Button android:id="@id/reallName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="实名结果" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

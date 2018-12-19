@@ -1,0 +1,10 @@
+    <color name="action_bn_text_color">#ffffffff</color>
+    <color name="colorAccent">#ffff4081</color>
+    <color name="colorPrimary">#ff3f51b5</color>
+    <color name="colorPrimaryDark">#ff303f9f</color>
+    <color name="desc_color">#ff8f8f8f</color>
+    <color name="title_color">#ff2f2f2f</color>
+    <color name="upsdk_black">#ff000000</color>
+    <color name="upsdk_blue_text_007dff">#ff007dff</color>
+    <color name="upsdk_category_button_select_pressed">#ff0076f2</color>
+    <color name="upsdk_white">#ffffffff</color>

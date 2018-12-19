@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="@dimen/dp22" android:paddingRight="@dimen/dp22" android:layout_width="fill_parent" android:layout_height="@dimen/dp105"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/sp36" android:textColor="#ff8a8a8a" android:gravity="center_vertical" android:id="@id/acountId" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ImageView android:id="@id/dellAccount" android:padding="@dimen/dp27" android:layout_width="@dimen/dp105" android:layout_height="fill_parent" android:src="@drawable/papasdk_dell_history_butn" android:layout_weight="0.0" />
+    </LinearLayout>
+    <TextView android:id="@id/textView" android:background="#ffd1d1d1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.tencent.ysdk.module.user.impl.wx.qrcode.SquareImageView android:id="@id/com_tencent_ysdk_qrCodeIm" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="45.0dip" android:layout_centerInParent="true" />
+    <ProgressBar android:id="@id/com_tencent_ysdk_loadingIm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="?android:progressBarStyle" />
+    <TextView android:textSize="18.0dip" android:textColor="@color/com_tencent_ysdk_real_name_title_color" android:id="@id/com_tencent_ysdk_tipsTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-40.0dip" android:layout_below="@id/com_tencent_ysdk_qrCodeIm" android:layout_centerHorizontal="true" />
+</RelativeLayout>

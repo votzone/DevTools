@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:id="@id/com_tencent_ysdk_icon_h5_layout" android:background="@android:color/transparent" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/com_tencent_ysdk_icon_h5_container" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.tencent.smtt.sdk.WebView android:id="@id/com_tencent_ysdk_icon_webView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.tencent.ysdk.framework.web.browser.ErrorPageView android:gravity="center" android:id="@id/com_tencent_ysdk_icon_errorpage" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <Button android:id="@id/com_tencent_ysdk_icon_h5_xx" android:background="@drawable/com_tencent_ysdk_icon_h5_xx" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_alignTop="@id/com_tencent_ysdk_icon_webView" android:layout_alignRight="@id/com_tencent_ysdk_icon_webView" />
+    </RelativeLayout>
+</RelativeLayout>

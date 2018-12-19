@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="263.0dip" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tip_title" android:background="#ff3a85e2" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="" />
+        <LinearLayout android:orientation="vertical" android:id="@id/layoutTop" android:paddingLeft="19.0dip" android:paddingTop="19.0dip" android:paddingRight="19.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/main_textsize_14sp" android:textColor="#ff1e1e1e" android:gravity="left" android:id="@id/dialog_content" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="兑换码已保存至“存号箱”" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff606060" android:gravity="left" android:id="@id/dialog_desci" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="请尽快下载游戏使用,以免过期" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingTop="19.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/papasdk_grey_common_bg" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/dp100" android:layout_marginLeft="19.0dip" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ff626262" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activation_code" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/main_bar_color" android:layout_gravity="center|left" android:id="@id/saveCodeContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />
+            </LinearLayout>
+            <TextView android:textColor="#fffa8819" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/saveCodeTv" android:background="@drawable/papasdk_recom_maincolor_butn" android:layout_marginLeft="10.0dip" android:layout_marginRight="19.0dip" android:text="复制" android:layout_weight="0.0" style="@style/ButtonStyle15_Gift_Text" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/layoutBottom" android:paddingLeft="19.0dip" android:paddingTop="19.0dip" android:paddingRight="19.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="#ff8a8a8a" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="兑换期限：" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff8a8a8a" android:gravity="left" android:id="@id/dialog_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+        </LinearLayout>
+        <TextView android:background="#ff888888" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="19.0dip" />
+        <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="45.0dip" android:minHeight="40.0dip">
+            <Button android:textSize="16.0sp" android:textColor="#ff6a6a6a" android:id="@id/dialog_button_ok" android:background="@drawable/papasdk_forum_dialog_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:layout_weight="1.0" />
+            <View android:background="#ff888888" android:layout_width="1.0px" android:layout_height="wrap_content" />
+            <Button android:textSize="16.0sp" android:textColor="#fff57e26" android:id="@id/dialog_button_cancle" android:background="@drawable/papasdk_forum_dialog_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="取消" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

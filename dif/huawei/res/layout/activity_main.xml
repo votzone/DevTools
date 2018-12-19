@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="40.0dip" android:background="#ff8888ff" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="支付" android:onClick="onClick" />
+            <TextView android:textSize="40.0dip" android:background="#ff8888ff" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="掉单配置" android:onClick="onClickDebugAddPres" />
+            <TextView android:textSize="40.0dip" android:background="#ff8888ff" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="掉单查询" android:onClick="onClickDebugDirectCall" />
+            <TextView android:textSize="40.0dip" android:background="#ff8888ff" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="展示插屏" android:onClick="onClickShowInter" />
+            <TextView android:textSize="40.0dip" android:background="#ff8888ff" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="展示横幅" android:onClick="onClickShowBanner" />
+            <TextView android:textSize="40.0dip" android:background="#ff8888ff" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="居左横幅" android:onClick="onClickLeftBanner" />
+            <TextView android:textSize="40.0dip" android:background="#ff8888ff" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="居中横幅" android:onClick="onClickCenterBanner" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="#ffd0d0d0" android:focusable="false" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@android:color/white" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:gravity="center" android:id="@id/btn_chat_praise" android:background="@drawable/papasdk_unlike" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+        <Button android:gravity="center" android:id="@id/btn_chat_extension" android:background="@drawable/papasdk_post_send_extension" android:layout_width="34.0dip" android:layout_height="34.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+        <RelativeLayout android:gravity="center_vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <view android:textSize="14.0sp" android:textColor="#ff6a6a6a" android:textColorHint="#ff989898" android:id="@id/edit_user_comment" android:background="@drawable/papasdk_forum_comment_editor_bg" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:minHeight="35.0dip" android:hint="添加评论" android:maxLines="5" android:layout_weight="1.0" android:imeOptions="flagNoExtractUi" android:textCursorDrawable="@null" class="com.papa91.pay.widget.ClearEditText" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff989898" android:gravity="center_vertical" android:id="@id/edit_comment_count" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="已有0条回复" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <Button android:textSize="14.0sp" android:textColor="#ff454545" android:gravity="center" android:layout_gravity="top" android:id="@id/btn_chat_send" android:background="@drawable/papasdk_posts_send" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="34.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:text="发送" />
+    </LinearLayout>
+    <View android:background="#ffa1a1a1" android:focusable="false" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="vertical" android:id="@id/chat_layout_more" android:background="#fff3f3f3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="200.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/chat_layout_emo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="120.0dip">
+            <android.support.v4.view.ViewPager android:id="@id/pager_emo" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <include android:id="@id/chat_layout_extension" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/papasdk_include_chat_add" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/chat_layout_extension_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <it.sephiroth.android.library.widget.HListView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/matchListView" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:hlv_dividerWidth="5.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

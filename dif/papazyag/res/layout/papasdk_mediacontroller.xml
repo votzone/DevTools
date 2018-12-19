@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/mediacontroller_bg" android:layout_width="fill_parent" android:layout_height="@dimen/mediacontroller_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/mediacontroller_play_pause" android:background="@drawable/papasdk_mediacontroller_button" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/papasdk_mediacontroller_pause" android:scaleType="fitCenter" android:layout_centerVertical="true" />
+        <ImageButton android:id="@id/mediacontroller_full_screen" android:background="@drawable/papasdk_mediacontroller_button" android:padding="9.0dip" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/papasdk_mediacontroller_fullscreen_in" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/mediacontroller_full_screen" android:layout_toRightOf="@id/mediacontroller_play_pause">
+            <TextView android:id="@id/mediacontroller_time_current" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_centerVertical="true" style="@style/MediaController_Text" />
+            <SeekBar android:id="@id/mediacontroller_seekbar" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:max="1000" android:layout_weight="1.0" android:layout_centerVertical="true" style="@style/MediaController_SeekBar" />
+            <TextView android:id="@id/mediacontroller_time_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_centerVertical="true" style="@style/MediaController_Text" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

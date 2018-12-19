@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/xxx" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp337">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/dp45" android:textColor="#ff3b3b3b" android:gravity="center" android:id="@id/textView" android:layout_width="fill_parent" android:layout_height="@dimen/dp106" android:text="选择代金券" android:layout_weight="0.0" />
+            <View android:layout_weight="0.0" style="@style/TextViewStyle_line_H" />
+            <ListView android:id="@id/papa_listView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:listSelector="@drawable/papasdk_list_item_back_selector" android:divider="#fff0f0f0" android:dividerHeight="@dimen/dp2" android:layout_weight="0.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="@dimen/sp45" android:textColor="@color/white" android:id="@id/ok" android:background="@drawable/papasdk_papa_coupon_choice_selecter" android:layout_width="fill_parent" android:layout_height="@dimen/dp123" android:layout_marginLeft="@dimen/dp33" android:layout_marginTop="@dimen/dp25" android:layout_marginRight="@dimen/dp33" android:layout_marginBottom="@dimen/dp25" android:text="确认" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

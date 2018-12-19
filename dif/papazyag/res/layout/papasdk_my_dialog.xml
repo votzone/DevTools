@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/papasdk_hint_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/dialog_title_image" android:background="@drawable/papasdk_money_bad" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="17.0sp" android:textColor="@color/bluetooth_textcolor" android:id="@id/dialog_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="你确定要终止传输吗？" android:layout_toRightOf="@id/dialog_title_image" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View android:background="@color/bluetooth_line_textcolor" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+    <RelativeLayout android:gravity="bottom|center" android:paddingTop="10.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="17.0sp" android:textColor="@color/white" android:id="@id/dialog_button_close" android:background="@drawable/papasdk_layout_grey_selector" android:layout_width="100.0dip" android:layout_height="40.0dip" android:text="终止传输" android:layout_alignParentLeft="true" />
+        <Button android:textSize="17.0sp" android:textColor="@color/white" android:id="@id/dialog_button_keep" android:background="@drawable/papasdk_layout_selector" android:layout_width="100.0dip" android:layout_height="40.0dip" android:layout_marginLeft="35.0dip" android:text="继续传输" android:layout_toRightOf="@id/dialog_button_close" />
+    </RelativeLayout>
+</LinearLayout>

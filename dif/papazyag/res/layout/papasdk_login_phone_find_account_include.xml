@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/dp52" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:background="@drawable/papasdk_papalogin_editback" android:layout_width="fill_parent" android:layout_height="@dimen/dp117">
+        <EditText android:textSize="@dimen/sp40" android:textColor="#ff3c3c3c" android:textColorHint="#ffc4c4c4" android:gravity="center_vertical" android:id="@id/phoneEdit" android:background="#00000000" android:paddingLeft="@dimen/dp150" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="请输入手机号" android:singleLine="true" android:layout_centerVertical="true" android:inputType="phone" android:imeOptions="actionNext" />
+        <ImageView android:id="@id/userIcon" android:layout_width="@dimen/dp57" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp36" android:src="@drawable/papasdk_papalogin_phone_icon" android:layout_centerVertical="true" />
+        <TextView android:id="@id/textView" android:background="#ffc4c4c4" android:layout_width="@dimen/dp1" android:layout_height="@dimen/dp52" android:layout_marginLeft="@dimen/dp36" android:text="New Text" android:layout_toRightOf="@id/userIcon" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="false" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/relativeLayout" android:background="@drawable/papasdk_papalogin_editback" android:layout_width="fill_parent" android:layout_height="@dimen/dp117" android:layout_marginTop="@dimen/dp57">
+        <EditText android:textSize="@dimen/sp40" android:textColor="#ff3c3c3c" android:textColorHint="#ffc4c4c4" android:gravity="center_vertical" android:id="@id/verifyCodeEdit" android:background="#00000000" android:paddingLeft="@dimen/dp150" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="请输入验证码" android:singleLine="true" android:layout_centerVertical="true" android:imeOptions="actionDone" />
+        <ImageView android:id="@id/adview" android:layout_width="@dimen/dp57" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp36" android:src="@drawable/papasdk_papalogin_passicon" android:layout_centerVertical="true" />
+        <TextView android:id="@id/textView2" android:background="#ffc4c4c4" android:layout_width="@dimen/dp1" android:layout_height="@dimen/dp52" android:layout_marginLeft="@dimen/dp36" android:text="New Text" android:layout_toRightOf="@id/adview" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="false" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/verityCodeButn" android:background="@drawable/papasdk_papalogin_greenbutn_seleter" android:layout_width="@dimen/dp252" android:layout_height="@dimen/dp72" android:layout_marginRight="@dimen/dp37" android:text="获取验证码" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp117" android:layout_marginTop="@dimen/dp57">
+        <Button android:textSize="@dimen/sp46" android:textColor="@android:color/white" android:id="@id/findAccount" android:background="@drawable/papasdk_papalogin_redbutn_seleter" android:layout_width="wrap_content" android:layout_height="@dimen/dp117" android:text="查找账号" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/zz" android:layout_width="fill_parent" android:layout_height="@dimen/dp67" android:layout_marginTop="@dimen/dp57">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/sp40" android:textColor="@color/grey_2" android:ellipsize="none" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="其他方式找回：" android:singleLine="true" />
+            <Button android:id="@id/imei" android:background="@drawable/papasdk_login_imei_butn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp11" />
+            <Button android:id="@id/history" android:background="@drawable/papasdk_login_his_butn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp22" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/sp40" android:textColor="#ff3a85e2" android:id="@id/backlogin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="返回登录" />
+    </LinearLayout>
+</LinearLayout>

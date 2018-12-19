@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:id="@id/small_window_layout" android:layout_width="48.0dip" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/half_hide_small_icon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/hms_game_buoy_icon_normal" />
+    <ImageView android:id="@id/small_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hms_game_buoy_icon_normal" />
+</LinearLayout>

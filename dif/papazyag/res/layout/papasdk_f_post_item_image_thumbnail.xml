@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:paddingLeft="@dimen/mg_forum_post_item_padding" android:paddingRight="@dimen/mg_forum_post_item_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/forum_post_media_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/forum_post_media_pic_main" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/img_m_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="centerCrop" android:layout_weight="1.0" />
+            <ImageView android:id="@id/img_m_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="centerCrop" android:layout_weight="1.0" android:layout_toRightOf="@id/img_m_1" />
+            <ImageView android:id="@id/img_m_3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/papasdk_main_normal_icon" android:scaleType="centerCrop" android:adjustViewBounds="false" android:layout_weight="1.0" android:layout_toRightOf="@id/img_m_2" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/images_count" android:background="#b2000000" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="共0张" android:layout_alignRight="@id/forum_post_media_pic_main" android:layout_alignBottom="@id/forum_post_media_pic_main" />
+    </RelativeLayout>
+</LinearLayout>

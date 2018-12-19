@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:background="@android:color/transparent" android:layout_width="@dimen/dp980" android:layout_height="@dimen/dp680">
+        <ImageView android:layout_gravity="center" android:id="@id/img" android:layout_width="@dimen/dp900" android:layout_height="@dimen/dp600" android:scaleType="fitXY" />
+        <com.papa91.pay.widget.LJWebView android:layout_gravity="center" android:id="@id/adWeb" android:visibility="visible" android:layout_width="@dimen/dp900" android:layout_height="@dimen/dp600" android:scaleType="fitXY" />
+        <ImageView android:layout_gravity="center|right|top" android:id="@id/close" android:padding="@dimen/dp15" android:layout_width="@dimen/dp100" android:layout_height="@dimen/dp100" android:src="@drawable/papasdk_ad_close" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ScrollView android:scrollbarStyle="outsideOverlay" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/divider" android:layout_width="fill_parent" android:layout_height="16.0dip" />
+                <RelativeLayout android:id="@id/name_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upsdk_ota_app_name" android:layout_alignParentRight="true" android:alpha="0.5" />
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:id="@id/name_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_toLeftOf="@id/name" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/version_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:id="@id/version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upsdk_app_version" android:layout_alignParentRight="true" android:alpha="0.5" />
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:id="@id/version_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_toLeftOf="@id/version" />
+                </RelativeLayout>
+                <RelativeLayout android:orientation="horizontal" android:id="@id/size_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:id="@id/size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upsdk_app_size" android:layout_alignParentRight="true" android:alpha="0.5" />
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:id="@id/appsize_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_toLeftOf="@id/size" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/upsdk_dialog_content_size" android:textColor="@color/upsdk_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/upsdk_detail" />
+                    <TextView android:textSize="@dimen/upsdk_dialog_subtitle_size" android:textColor="@color/upsdk_black" android:id="@id/content_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:lineSpacingMultiplier="1.1" android:alpha="0.5" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
