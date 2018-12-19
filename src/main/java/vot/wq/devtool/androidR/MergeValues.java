@@ -17,6 +17,11 @@ public class MergeValues {
         this.originalDir = originalDir;
     }
 
+    public MergeValues(File nMergeDir, File originalDir){
+        this.nMergeDir = nMergeDir.getAbsolutePath() ;
+        this.originalDir = originalDir.getAbsolutePath();
+    }
+
     public void merge() throws IOException {
         File dirMerge = new File(nMergeDir);
         if(dirMerge.exists() &&dirMerge.isDirectory()) {
@@ -46,7 +51,7 @@ public class MergeValues {
                     }else if(valueFile.getName().endsWith("styles.xml")){
                         mergeStyles(valueFile,oriFile);
                     }else {
-                        L.e("not support file type");
+                        L.e("not support file type :"+ oriFile.getAbsolutePath());
                     }
                 }else {
                     Files.copy(valueFile.toPath(), oriFile.toPath());

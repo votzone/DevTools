@@ -20,6 +20,7 @@ public class DevMain {
         L.ti(null,"\t4- Reset Smali R Ids");
         L.ti(null,"\t5- Merge Public Xml File");
         L.ti(null,"\t6- Split Unity File");
+        L.ti(null,"\t7- Merge Android Res");
         L.ti(null,"\tD- Debug");
         L.ti(null,"\tE- Exit");
         String charset = "utf-8";
@@ -87,6 +88,10 @@ public class DevMain {
 
                 if(cmds.contains("6")){
                     FileSplitCli.splitFile();
+                }
+
+                if(cmds.contains("7")){
+                    AndroidRCli.mergeAndroidRes();
                 }
 
                 if (cmds.contains("E")) {

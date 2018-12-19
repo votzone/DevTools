@@ -48,5 +48,5 @@ public class StringValue extends AndroidValue {
 
     }
 
-    public static final String new_line_flag = "/n";
+    public static final String new_line_flag = "/**new_line_flag**/";
 }
