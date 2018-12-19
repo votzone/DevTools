@@ -18,7 +18,7 @@ public class AttrValue extends AndroidValue {
     @Override
     public void setValue(String line) {
         line = line.trim();
-        if(line.endsWith("/>") || line.endsWith("</attr>")){
+        if((line.startsWith("<attr")&&line.endsWith("/>"))|| line.endsWith("</attr>")){
             closed = true;
         }
 

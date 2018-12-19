@@ -6,6 +6,7 @@ import vot.wq.devtool.androidR.module.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MergeValues {
     private String nMergeDir;
@@ -56,15 +57,107 @@ public class MergeValues {
         }
     }
 
-    private void mergeArrays(File mergeFile, File oriFile){
-        // todo 1 read all ori values
-        // todo 2 read all merge values
-        // todo 3 merge to ori and write
+    private void mergeArrays(File mergeFile, File oriFile) throws IOException {
+        // 1 read all ori values
+        ArrayList<ArrayValue> oriValues = new ArrayList<>();
+        ArrayList<ArrayValue> mergeValues = new ArrayList<>();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
+                new FileInputStream(oriFile),"utf-8"));
+        String line ;
+        ArrayValue arrayValue = new ArrayValue();
+        while ((line = bufferedReader.readLine())!=null){
+            arrayValue.setValue(line);
+            if(arrayValue.closed()){
+                oriValues.add(arrayValue);
+                arrayValue = new ArrayValue();
+            }
+        }
+        bufferedReader.close();
+        // 2 read all merge values
+        bufferedReader= new BufferedReader(new InputStreamReader(
+                new FileInputStream(mergeFile),"utf-8"));
+        arrayValue = new ArrayValue();// 不需要设置的，以防万一
+        while ((line = bufferedReader.readLine())!=null){
+            arrayValue.setValue(line);
+            if(arrayValue.closed()){
+                if(!findAndroidValue(oriValues, arrayValue)){
+                    mergeValues.add(arrayValue);
+                }
+                arrayValue = new ArrayValue();
+            }
+        }
+        bufferedReader.close();
+        // 3 merge to ori and write
+        File tmpFile =new File (oriFile.getAbsolutePath()+"_");
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream(tmpFile),"utf-8"));
+        bufferedWriter.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n");
+
+        for (ArrayValue bv: oriValues){
+            bufferedWriter.write(bv.toString());
+            bufferedWriter.write("\n");
+        }
+
+        for (ArrayValue bv: mergeValues){
+            bufferedWriter.write(bv.toString());
+            bufferedWriter.write("\n");
+        }
+        bufferedWriter.write("</resources>\n");
+        bufferedWriter.close();
+
+        oriFile.delete();
+        tmpFile.renameTo(oriFile);
     }
-    private void mergeAttrs(File mergeFile, File oriFile){
-        // todo 1 read all ori values
-        // todo 2 read all merge values
-        // todo 3 merge to ori and write
+    private void mergeAttrs(File mergeFile, File oriFile) throws IOException {
+        // 1 read all ori values
+        ArrayList<AttrValue> oriValues = new ArrayList<>();
+        ArrayList<AttrValue> mergeValues = new ArrayList<>();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
+                new FileInputStream(oriFile),"utf-8"));
+        String line ;
+        AttrValue attrValue = new AttrValue();
+        while ((line = bufferedReader.readLine())!=null){
+            attrValue.setValue(line);
+            if(attrValue.closed()){
+                oriValues.add(attrValue);
+                attrValue = new AttrValue();
+            }
+        }
+        bufferedReader.close();
+        // 2 read all merge values
+        bufferedReader= new BufferedReader(new InputStreamReader(
+                new FileInputStream(mergeFile),"utf-8"));
+        attrValue = new AttrValue();// 不需要设置的，以防万一
+        while ((line = bufferedReader.readLine())!=null){
+            attrValue.setValue(line);
+            if(attrValue.closed()){
+                if(!findAndroidValue(oriValues, attrValue)){
+                    mergeValues.add(attrValue);
+                }
+                attrValue = new AttrValue();
+            }
+        }
+        bufferedReader.close();
+        // 3 merge to ori and write
+        File tmpFile =new File (oriFile.getAbsolutePath()+"_");
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream(tmpFile),"utf-8"));
+        bufferedWriter.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n");
+
+        for (AttrValue bv: oriValues){
+            bufferedWriter.write(bv.toString());
+            bufferedWriter.write("\n");
+        }
+
+        for (AttrValue bv: mergeValues){
+            bufferedWriter.write(bv.toString());
+            bufferedWriter.write("\n");
+        }
+        bufferedWriter.write("</resources>\n");
+        bufferedWriter.close();
+
+        oriFile.delete();
+        tmpFile.renameTo(oriFile);
     }
 
     private void mergeBools(File mergeFile, File oriFile) throws IOException {
@@ -418,17 +511,66 @@ public class MergeValues {
         }
         bufferedReader.close();
         // todo ************************ 3 merge public to ori and write ************************
+
+        ArrayList<PublicValue> merged = new ArrayList<>();
+
+        // oriTypeIndex 排序依据，根据orivalues出现的先后顺序而定
+        ArrayList<String> oriTypeIndex = new ArrayList<>();
+
+        // 遍历 orivalues 生成一个有序的type 数组，后续根据每个type来merge
+        for (PublicValue bv: oriValues){
+            // 根据出现的先后顺序排序
+            if(!oriTypeIndex.contains(bv.getType())){
+                oriTypeIndex.add(bv.getType()) ;
+            }
+        }
+
+        // 根据 type 合并 orivalues 和 mergevalues
+        int all_max_id = 0;
+        for(String crtType: oriTypeIndex){
+            int type_max = -1;
+            for(PublicValue pv: oriValues){
+                if(pv.getType().equals(crtType)) {
+                    merged.add(pv);
+                    // 查找该type 最大的id
+                    type_max = pv.getId() > type_max?pv.getId():type_max;
+                    // 查找所有type 最大的id
+                    all_max_id = pv.getId() > all_max_id? pv.getId(): all_max_id;
+                }
+            }
+
+            // 根据 type_max 重置 id后 合并
+            for (PublicValue pv: mergeValues){
+                if(pv.getType().equals(crtType)){
+                    pv.resetId(++type_max);
+                    merged.add(pv);
+                }
+            }
+        }
+
+        // 处理 mergevalues 独有的type 类型
+        ArrayList<String> mergeTypeIndex = new ArrayList<>();
+        for (PublicValue pv: mergeValues){
+            if(!oriTypeIndex.contains(pv.getType())&& !mergeTypeIndex.contains(pv.getType())){
+                mergeTypeIndex.add(pv.getType());
+            }
+        }
+        for (String megType: mergeTypeIndex){
+            all_max_id = (all_max_id >>16 +1)<<16;
+            for (PublicValue pv: mergeValues){
+                if(pv.getType().equals(megType)){
+                    pv.resetId(++all_max_id);
+                    merged.add(pv);
+                }
+            }
+        }
+
+        // write 2 file
         File tmpFile =new File (oriFile.getAbsolutePath()+"_");
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(
                 new FileOutputStream(tmpFile),"utf-8"));
         bufferedWriter.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n");
-
-        for (PublicValue bv: oriValues){
-            bufferedWriter.write(bv.toString());
-            bufferedWriter.write("\n");
-        }
-
-        for (PublicValue bv: mergeValues){
+        for (PublicValue bv: merged){
             bufferedWriter.write(bv.toString());
             bufferedWriter.write("\n");
         }
@@ -440,14 +582,108 @@ public class MergeValues {
 
     }
 
-    private void mergeStrings(File mergeFile, File oriFile){
-        // todo 1 read all ori values
-        // todo 2 read all merge values
-        // todo 3 merge to ori and write
-    }private void mergeStyles(File mergeFile, File oriFile){
-        // todo 1 read all ori values
-        // todo 2 read all merge values
-        // todo 3 merge to ori and write
+    private void mergeStrings(File mergeFile, File oriFile) throws IOException {
+        // 1 read all ori values
+        ArrayList<StringValue> oriValues = new ArrayList<>();
+        ArrayList<StringValue> mergeValues = new ArrayList<>();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
+                new FileInputStream(oriFile),"utf-8"));
+        String line ;
+        StringValue stringValue = new StringValue();
+        while ((line = bufferedReader.readLine())!=null){
+            stringValue.setValue(line);
+            if(stringValue.closed()){
+                oriValues.add(stringValue);
+                stringValue = new StringValue();
+            }
+        }
+        bufferedReader.close();
+        // 2 read all merge values
+        bufferedReader= new BufferedReader(new InputStreamReader(
+                new FileInputStream(mergeFile),"utf-8"));
+        stringValue = new StringValue();// 不需要设置的，以防万一
+        while ((line = bufferedReader.readLine())!=null){
+            stringValue.setValue(line);
+            if(stringValue.closed()){
+                if(!findAndroidValue(oriValues, stringValue)){
+                    mergeValues.add(stringValue);
+                }
+                stringValue = new StringValue();
+            }
+        }
+        bufferedReader.close();
+        // 3 merge to ori and write
+        File tmpFile =new File (oriFile.getAbsolutePath()+"_");
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream(tmpFile),"utf-8"));
+        bufferedWriter.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n");
+
+        for (StringValue bv: oriValues){
+            bufferedWriter.write(bv.toString());
+            bufferedWriter.write("\n");
+        }
+
+        for (StringValue bv: mergeValues){
+            bufferedWriter.write(bv.toString());
+            bufferedWriter.write("\n");
+        }
+        bufferedWriter.write("</resources>\n");
+        bufferedWriter.close();
+
+        oriFile.delete();
+        tmpFile.renameTo(oriFile);
+    }
+
+    private void mergeStyles(File mergeFile, File oriFile) throws IOException {
+        // 1 read all ori values
+        ArrayList<StyleValue> oriValues = new ArrayList<>();
+        ArrayList<StyleValue> mergeValues = new ArrayList<>();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
+                new FileInputStream(oriFile),"utf-8"));
+        String line ;
+        StyleValue styleValue = new StyleValue();
+        while ((line = bufferedReader.readLine())!=null){
+            styleValue.setValue(line);
+            if(styleValue.closed()){
+                oriValues.add(styleValue);
+                styleValue = new StyleValue();
+            }
+        }
+        bufferedReader.close();
+        // 2 read all merge values
+        bufferedReader= new BufferedReader(new InputStreamReader(
+                new FileInputStream(mergeFile),"utf-8"));
+        styleValue = new StyleValue();// 不需要设置的，以防万一
+        while ((line = bufferedReader.readLine())!=null){
+            styleValue.setValue(line);
+            if(styleValue.closed()){
+                if(!findAndroidValue(oriValues, styleValue)){
+                    mergeValues.add(styleValue);
+                }
+                styleValue = new StyleValue();
+            }
+        }
+        bufferedReader.close();
+        // 3 merge to ori and write
+        File tmpFile =new File (oriFile.getAbsolutePath()+"_");
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream(tmpFile),"utf-8"));
+        bufferedWriter.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n");
+
+        for (StyleValue bv: oriValues){
+            bufferedWriter.write(bv.toString());
+            bufferedWriter.write("\n");
+        }
+
+        for (StyleValue bv: mergeValues){
+            bufferedWriter.write(bv.toString());
+            bufferedWriter.write("\n");
+        }
+        bufferedWriter.write("</resources>\n");
+        bufferedWriter.close();
+
+        oriFile.delete();
+        tmpFile.renameTo(oriFile);
     }
 
 

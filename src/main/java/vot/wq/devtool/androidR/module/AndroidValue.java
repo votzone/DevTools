@@ -24,6 +24,21 @@ public abstract class AndroidValue {
         return toString();
     }
 
+    public static int attr_key_sort_index(String key){
+        switch (key){
+            case "type":
+                return 1;
+            case "name":
+                return 2;
+            case "id":
+                return 3;
+            case "parent":
+                return 4;
+            case "format":
+                return 5;
+        }
+        return 6;
+    }
     @Override
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
@@ -35,7 +50,8 @@ public abstract class AndroidValue {
         for (String key : attrs.keySet()){
             keys.add(key);
         }
-        keys.sort(Comparator.reverseOrder());
+
+        keys.sort(Comparator.comparingInt(AndroidValue::attr_key_sort_index));
 
         for (String key : keys){
             stringBuilder.append(" ").append(key).append("=\"").append(attrs.get(key)).append("\"");
@@ -44,9 +60,8 @@ public abstract class AndroidValue {
             stringBuilder.append(" />");
         }else {
             stringBuilder.append(">");
-            // todo 需要加 values
             boolean mutiLine = false;
-            String first = values.get(0).trim();
+            String first = values.get(0).trim().replace(StringValue.new_line_flag,"\n");
             mutiLine = first.startsWith("<") && first.endsWith(">");
             if(mutiLine){
                 stringBuilder.append("\n");
@@ -54,8 +69,9 @@ public abstract class AndroidValue {
                 for(String val: values){
                     stringBuilder.append(appendPfx(crtDept)).append(val).append("\n");
                 }
-                stringBuilder.append("</").append(name).append(">");
                 crtDept--;
+                stringBuilder.append(appendPfx(crtDept)).append("</").append(name).append(">");
+
             }else {
                 stringBuilder.append(first).append("</").append(name).append(">");
             }

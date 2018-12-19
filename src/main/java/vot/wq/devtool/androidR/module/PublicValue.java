@@ -5,6 +5,9 @@ import java.util.regex.Pattern;
 
 public class PublicValue extends AndroidValue{
 
+    private String type,name;
+    private int id;
+
     static Pattern pattern = Pattern.compile("<public type=\"(.*)\" name=\"(.*)\" id=\"(.*)\" />");
     public PublicValue() {
         super("public");
@@ -14,13 +17,23 @@ public class PublicValue extends AndroidValue{
     public void setValue(String line) {
         Matcher matcher = pattern.matcher(line);
         if(matcher.find()) {
-            attrs.put("type",matcher.group(1));
-            attrs.put("name",matcher.group(2));
-            attrs.put("id",matcher.group(3));
+            type = matcher.group(1);
+            attrs.put("type", type);
+            name = matcher.group(2);
+            attrs.put("name", name);
+            String sid = matcher.group(3);
+            attrs.put("id",sid);
+            id = Integer.parseInt(sid.replace("0x",""),16);
             closed = true;
         }else {
             closed = false;
         }
+    }
+
+    public void resetId(int id){
+        this.id = id;
+        String sid = "0x"+Integer.toHexString(id);
+        attrs.put("id",sid);
     }
 
     @Override
@@ -36,4 +49,33 @@ public class PublicValue extends AndroidValue{
         }
         return false;
     }
+
+
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }
