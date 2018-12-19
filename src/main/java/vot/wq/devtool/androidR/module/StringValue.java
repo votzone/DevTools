@@ -16,6 +16,9 @@ public class StringValue extends AndroidValue {
         if(matcher.find()) {
             attrs.put("name",matcher.group(1));
             values.add(matcher.group(2));
+            closed = true;
+        }else {
+            closed = false;
         }
     }
 }

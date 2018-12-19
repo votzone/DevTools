@@ -15,6 +15,9 @@ public class IdValue extends AndroidValue {
         Matcher matcher = pattern.matcher(line);
         if(matcher.find()) {
             attrs.put("name",matcher.group(1));
+            closed = true;
+        }else {
+            closed = false;
         }
     }
 }

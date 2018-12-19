@@ -17,6 +17,9 @@ public class PublicValue extends AndroidValue{
             attrs.put("type",matcher.group(1));
             attrs.put("name",matcher.group(2));
             attrs.put("id",matcher.group(3));
+            closed = true;
+        }else {
+            closed = false;
         }
     }
 

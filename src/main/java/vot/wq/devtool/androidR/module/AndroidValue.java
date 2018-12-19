@@ -22,6 +22,7 @@ public abstract class AndroidValue {
         return toString();
     }
 
+    @Override
     public String toString(){
         StringBuilder stringBuilder = new StringBuilder();
         int crtDept = depth;
@@ -106,7 +107,7 @@ public abstract class AndroidValue {
         return false;
     }
 
-    protected boolean closed = true;
+    protected boolean closed = false;
     public boolean closed(){
         return closed;
     }
