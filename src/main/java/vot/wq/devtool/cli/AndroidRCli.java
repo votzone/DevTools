@@ -42,6 +42,7 @@ public class AndroidRCli {
         MergeRes mergeRes = new MergeRes(needMerge, oriDir);
         try {
             mergeRes.merge();
+            mergeRes.resetRIds();
         } catch (IOException e) {
             e.printStackTrace();
         }

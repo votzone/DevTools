@@ -43,7 +43,6 @@ public class MergeRes {
     }
 
     public void merge() throws IOException {
-
         for (File subDir: nMergeDir.listFiles()){
             if(!subDir.isDirectory()){
                 return;
@@ -69,5 +68,12 @@ public class MergeRes {
                 }
             }
         }
+    }
+
+    public void resetRIds(){
+        String smaliDir = new File(originalDir.getParent(),"smali").getAbsolutePath();
+        String difIdsFilePath = new File(originalDir,"values/public.xml".replace("/",File.separator)).getAbsolutePath();
+        ResetSmaliIds resetSmaliIds = new ResetSmaliIds(smaliDir, difIdsFilePath);
+        resetSmaliIds.reset();
     }
 }
