@@ -1,7 +1,9 @@
 package vot.wq.devtool.androidR.module;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Set;
 
 public abstract class AndroidValue {
     public static final String LinePfx1 = "    ";
@@ -28,12 +30,20 @@ public abstract class AndroidValue {
         int crtDept = depth;
         stringBuilder.append(appendPfx(crtDept));
         stringBuilder.append("<").append(name);
+
+        ArrayList<String> keys = new ArrayList<>();
         for (String key : attrs.keySet()){
-            stringBuilder.append(" ").append(key).append("=").append(attrs.get(key));
+            keys.add(key);
+        }
+        keys.sort(Comparator.reverseOrder());
+
+        for (String key : keys){
+            stringBuilder.append(" ").append(key).append("=\"").append(attrs.get(key)).append("\"");
         }
         if(values.size() <= 0){
             stringBuilder.append(" />");
         }else {
+            stringBuilder.append(">");
             // todo 需要加 values
             boolean mutiLine = false;
             String first = values.get(0).trim();
@@ -97,12 +107,9 @@ public abstract class AndroidValue {
     }
 
     abstract public void setValue(String line);
-    public boolean equals(AndroidValue obj){
-        if(obj instanceof AndroidValue){
-            IdValue other = (IdValue)obj;
-            if(attrs.containsKey("name") && other.attrs.containsKey("name")){
-                return attrs.get("name").equals(other.attrs.get("name"));
-            }
+    public boolean equals(AndroidValue other){
+        if(attrs.containsKey("name") && other.attrs.containsKey("name")){
+            return attrs.get("name").equals(other.attrs.get("name"));
         }
         return false;
     }

@@ -29,7 +29,7 @@ public class PublicValue extends AndroidValue{
             return false;
         }
         if(obj instanceof PublicValue){
-            IdValue other = (IdValue)obj;
+            PublicValue other = (PublicValue)obj;
             if(attrs.containsKey("type") && other.attrs.containsKey("type")){
                 return attrs.get("type").equals(other.attrs.get("type"));
             }
