@@ -1,4 +1,6 @@
-package vot.wq.devtool.androidR.module;
+package vot.wq.devtool.androidR.module.value;
+
+import vot.wq.devtool.androidR.module.AndroidValue;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

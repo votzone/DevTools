@@ -2,6 +2,7 @@ package vot.wq.devtool.cli;
 
 import vot.wq.devtool.Config;
 import vot.wq.devtool.L;
+import vot.wq.devtool.androidR.module.AndroidValue;
 import vot.wq.devtool.gui.system.SystemIcon;
 
 import javax.swing.*;
@@ -21,6 +22,7 @@ public class DevMain {
         L.ti(null,"\t5- Merge Public Xml File");
         L.ti(null,"\t6- Split Unity File");
         L.ti(null,"\t7- Merge Android Res");
+        L.ti(null,"\t8- Simplify AndroidManifest.xml Permissions");
         L.ti(null,"\tD- Debug");
         L.ti(null,"\tE- Exit");
         String charset = "utf-8";
@@ -92,6 +94,10 @@ public class DevMain {
 
                 if(cmds.contains("7")){
                     AndroidRCli.mergeAndroidRes();
+                }
+
+                if(cmds.contains("8")){
+                    AndroidRCli.simplyManifestPermissions();
                 }
 
                 if (cmds.contains("E")) {

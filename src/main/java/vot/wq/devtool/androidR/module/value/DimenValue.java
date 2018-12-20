@@ -1,9 +1,11 @@
-package vot.wq.devtool.androidR.module;
+package vot.wq.devtool.androidR.module.value;
+
+import vot.wq.devtool.androidR.module.AndroidValue;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DimenValue extends AndroidValue{
+public class DimenValue extends AndroidValue {
 
     static Pattern pattern1 = Pattern.compile("<dimen name=\"(.*)\">(.*)</dimen>");
     static Pattern pattern2 = Pattern.compile("<item type=\"dimen\" name=\"(.*)\">(.*)</item>");

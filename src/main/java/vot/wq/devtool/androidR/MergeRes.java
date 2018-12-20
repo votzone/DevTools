@@ -2,6 +2,7 @@ package vot.wq.devtool.androidR;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 
 public class MergeRes {
@@ -42,7 +43,7 @@ public class MergeRes {
 
     }
 
-    public void merge() throws IOException {
+    public void merge() throws IOException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
         for (File subDir: nMergeDir.listFiles()){
             if(!subDir.isDirectory()){
                 return;

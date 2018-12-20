@@ -1,6 +1,7 @@
 package vot.wq.devtool.cli;
 
 import vot.wq.devtool.L;
+import vot.wq.devtool.androidR.ManifestSimplify;
 import vot.wq.devtool.androidR.MergePublicXml;
 import vot.wq.devtool.androidR.MergeRes;
 import vot.wq.devtool.androidR.ResetSmaliIds;
@@ -43,6 +44,19 @@ public class AndroidRCli {
         try {
             mergeRes.merge();
             mergeRes.resetRIds();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void simplyManifestPermissions(){
+        Scanner in = GlobalUtil.getScanner();
+        L.tiol(null,"AndroidManifest Path: ");
+        String manifestPath = in.nextLine();
+
+        ManifestSimplify manifestSimplify = new ManifestSimplify(manifestPath);
+        try {
+            manifestSimplify.simply();
         } catch (IOException e) {
             e.printStackTrace();
         }

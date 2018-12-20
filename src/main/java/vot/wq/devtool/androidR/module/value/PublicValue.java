@@ -1,9 +1,11 @@
-package vot.wq.devtool.androidR.module;
+package vot.wq.devtool.androidR.module.value;
+
+import vot.wq.devtool.androidR.module.AndroidValue;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PublicValue extends AndroidValue{
+public class PublicValue extends AndroidValue {
 
     private String type,name;
     private int id;
