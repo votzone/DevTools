@@ -112,12 +112,23 @@ public class ResetSmaliIds {
 
     private String buildLine(String value,String id){
         String format = ".field public static final %s:I = %s\n";
+        if(!isFinal){
+            format = ".field public static %s:I = %s\n";
+        }
         return String.format(format,value,id);
     }
 
+    private boolean isFinal = true;
     private String obtainValue(String line){
+        isFinal = true;
         Pattern pattern = Pattern.compile(".field public static final (.*):I = 0x");
         Matcher matcher = pattern.matcher(line);
+        if(matcher.find()) {
+            return matcher.group(1);
+        }
+        isFinal = false;
+        pattern = Pattern.compile(".field public static (.*):I = 0x");
+        matcher = pattern.matcher(line);
         if(matcher.find()) {
             return matcher.group(1);
         }
