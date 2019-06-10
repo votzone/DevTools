@@ -23,6 +23,8 @@ public class DevMain {
         L.ti(null,"\t6- Split Unity File");
         L.ti(null,"\t7- Merge Android Res");
         L.ti(null,"\t8- Simplify AndroidManifest.xml Permissions");
+        L.ti(null,"\t9- Unity2IOS");
+        L.ti(null,"\ta- Combine Unity File");
         L.ti(null,"\tD- Debug");
         L.ti(null,"\tE- Exit");
         String charset = "utf-8";
@@ -100,9 +102,19 @@ public class DevMain {
                     AndroidRCli.simplyManifestPermissions();
                 }
 
+                if(cmds.contains("9")){
+                    Unity2Ios.unity2Ios();
+                }
+
+                if(cmds.contains("a")){
+                    Unity2Ios.combinAssets();
+                }
+
                 if (cmds.contains("E")) {
                     System.exit(0);
                 }
+
+
             }
 //        }
     }

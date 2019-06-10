@@ -8,11 +8,15 @@ public abstract class DirWalker {
     abstract public void dealOneFile(File file) throws IOException ;
     protected void walkInDir(String dir) throws IOException {
         File p = new File(dir);
-        for(File file:p.listFiles()){
-            if(file.isDirectory()){
-                walkInDir(file.getAbsolutePath());
+        if(p.isFile()){
+            dealOneFile(p);
+        }else {
+            for (File file : p.listFiles()) {
+                if (file.isDirectory()) {
+                    walkInDir(file.getAbsolutePath());
+                }
+                dealOneFile(file);
             }
-            dealOneFile(file);
         }
     }
 }
