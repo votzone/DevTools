@@ -561,7 +561,7 @@ public class MergeValues {
             }
         }
         for (String megType: mergeTypeIndex){
-            all_max_id = (all_max_id >>16 +1)<<16;
+            all_max_id = ((all_max_id >>16) +1)<<16;
             for (PublicValue pv: mergeValues){
                 if(pv.getType().equals(megType)){
                     pv.resetId(++all_max_id);
