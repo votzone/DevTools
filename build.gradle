@@ -33,7 +33,18 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
-
+repositories {
+    mavenLocal()
+    maven {
+        name "aliyun1"
+        url 'http://maven.aliyun.com/nexus/content/groups/public'
+    }
+    maven {
+        name "aliyun2"
+        url 'http://maven.aliyun.com/mvn/repository/'
+    }
+    mavenCentral()
+}
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
@@ -44,5 +55,4 @@ dependencies {
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
     compile 'cn.wanghaomiao:JsoupXpath:2.1-Beta'
     compile group: 'com.google.guava', name: 'guava', version: '27.0-jre'
-
 }

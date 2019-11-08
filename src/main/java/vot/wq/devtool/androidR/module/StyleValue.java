@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 public class StyleValue extends AndroidValue {
     static Pattern pattern1 = Pattern.compile("<style name=\"(.*)\" parent=\"(.*)\" />");
+    static Pattern pattern11 = Pattern.compile("<style name=\"(.*)\" parent=\"(.*)\">");
     static Pattern pattern2 = Pattern.compile("<style name=\"(.*)\">");
     static Pattern pattern3 = Pattern.compile("<item.*</item>");
 
@@ -21,6 +22,12 @@ public class StyleValue extends AndroidValue {
         }
 
         Matcher matcher = pattern1.matcher(line);
+        if(matcher.find()){
+            attrs.put("name",matcher.group(1));
+            attrs.put("parent",matcher.group(2));
+            return;
+        }
+        matcher = pattern11.matcher(line);
         if(matcher.find()){
             attrs.put("name",matcher.group(1));
             attrs.put("parent",matcher.group(2));
