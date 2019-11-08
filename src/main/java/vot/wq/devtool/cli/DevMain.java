@@ -2,11 +2,13 @@ package vot.wq.devtool.cli;
 
 import vot.wq.devtool.Config;
 import vot.wq.devtool.L;
+import vot.wq.devtool.androidR.MergeRes;
 import vot.wq.devtool.gui.system.SystemIcon;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class DevMain {
@@ -56,7 +58,23 @@ public class DevMain {
             // 当且仅当win 平台使用gbk
             Config.needGbk = true;
         }
-
+        if(args.length >= 3) {
+            if(args[0].equals("7")){
+                String needMerge = args[1];
+                String oriDir = args[2];
+                L.e(args[0]);
+                L.e(args[1]);
+                L.e(args[2]);
+                MergeRes mergeRes = new MergeRes(needMerge, oriDir);
+                try {
+                    mergeRes.merge();
+                    mergeRes.resetRIds();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return;
+        }
 //        if(args == null || args.length <=0){
 //            showTrayIcon();
 //        }else {
